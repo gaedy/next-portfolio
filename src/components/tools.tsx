@@ -40,30 +40,37 @@ const Tools: React.FC = () => {
     ];
 
     return (
-        <div className="flex flex-col justify-between py-3">
-            <div className="font-medium pt-2">Tools & Technologies I use</div>
+        <div className="flex flex-col justify-between gap-4 ">
+            <div className="font-medium ">Tools & Technologies I use</div>
 
-            <p className="text-[14px] mt-4 mb-2">Front-End</p>
-            <div className="flex flex-row justify-start gap-2 items-center flex-wrap">
-                {myFrontTools.map((tool, index) => (
-                    <Tooltip key={index} content={tool.name}>
-                        <div className="w-14 h-14 bg-neutral-800 flex items-center justify-center rounded-lg">
-                            {tool.icon}
-                        </div>
-                    </Tooltip>
-                ))}
+
+            <div className="flex flex-col gap-2">
+                <p className="text-[14px] ">Front-End</p>
+                <div className="flex flex-row justify-start gap-2 items-center flex-wrap">
+                    {myFrontTools.map((tool, index) => (
+                        <Tooltip key={index} content={tool.name}>
+                            <div className="w-14 h-14 bg-neutral-800 flex items-center justify-center rounded-lg">
+                                {tool.icon}
+                            </div>
+                        </Tooltip>
+                    ))}
+                </div>
             </div>
 
-            <p className="text-[14px] mt-4 mb-2">Design</p>
-            <div className="flex flex-row justify-start gap-2 items-center flex-wrap">
-                {myUiTools.map((tool, index) => (
-                    <Tooltip key={index} content={tool.name}>
-                        <div className="w-14 h-14 bg-neutral-800 flex items-center justify-center rounded-lg">
-                            {tool.icon}
-                        </div>
-                    </Tooltip>
-                ))}
+
+            <div className="flex flex-col gap-2">
+                <p className="text-[14px]">Design</p>
+                <div className="flex flex-row justify-start gap-2 items-center flex-wrap">
+                    {myUiTools.map((tool, index) => (
+                        <Tooltip key={index} content={tool.name}>
+                            <div className="w-14 h-14 bg-neutral-800 flex items-center justify-center rounded-lg">
+                                {tool.icon}
+                            </div>
+                        </Tooltip>
+                    ))}
+                </div>
             </div>
+
         </div>
     );
 };

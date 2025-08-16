@@ -1,0 +1,28 @@
+{
+  "blogPosts": {
+    "senate-voting-gop-tax-breaks": {
+      "title": "Senate up late voting on GOP tax breaks and spending cuts plan that's central to Trump agenda",
+      "content": "In a tense session that extended well into the early hours, the U.S. Senate debated a sweeping tax reform and federal budget adjustment bill that has become a cornerstone of the GOP’s renewed economic strategy and a revival of former President Donald Trump’s fiscal vision.\n\nThe bill proposes significant corporate tax reductions—lowering the rate from 21% to 15%—alongside deep cuts to federal programs including environmental protection, public broadcasting, and education grants. Supporters argue the changes will stimulate economic growth, attract more international business investment, and give American corporations a competitive edge in the global marketplace.\n\nHowever, the bill has faced intense scrutiny. Critics from both sides of the aisle have raised alarms about the long-term effects of these cuts, particularly on low-income communities and essential public services. “This plan is a windfall for billionaires and a punch in the gut for working families,” said Sen. Maria Thompson (D-WA). “We cannot build a sustainable economy by sacrificing healthcare, housing, and education.”\n\nDespite the heated rhetoric, the bill narrowly advanced past the committee stage. As of this writing, it awaits a full Senate vote later this week, with several key swing votes still undecided. The outcome could mark a pivotal moment for the direction of U.S. fiscal policy in the post-pandemic recovery era.",
+      "author": "Ahmed Gaeedy",
+      "date": "2025-02-20T14:30:00Z",
+      "img": "/img1.jpg",
+      "isFeatured": false
+    },
+    "why-i-dont-use-linux": {
+      "title": "Why I Don't Use Linux on My Desktop PC",
+      "content": "Let me start by saying this: I love Linux. I admire the community, the openness, the sheer power under the hood. But despite all that, I don't use it on my primary desktop. Here's why.\n\nFirst, the hardware compatibility issues. Even in 2025, getting Linux to play nicely with high-end GPUs, Wi-Fi adapters, or even fingerprint sensors can be a hassle. Sure, there are fixes—and I’ve spent hours on forums finding them—but that's time I’d rather spend being productive.\n\nThen there's the software. I’m a video editor and audio producer, and while open-source alternatives like Kdenlive and Ardour are impressive, they don’t match the reliability and integration of Adobe Premiere Pro or Ableton Live. Wine or virtual machines can bridge some of the gap, but it’s not seamless.\n\nI also find that while some distros aim to be user-friendly, they often still require terminal-level intervention for basic tasks. That’s great for learning, but frustrating when I just want something to work.\n\nLinux shines on servers, developer environments, and embedded systems. But for everyday creative and professional desktop work—at least in my experience—Windows and macOS still provide a more complete, out-of-the-box experience.\n\nAnd that's okay. I’ll continue to root for Linux from the sidelines, contribute to a few projects when I can, and run it on my Raspberry Pi. But for my main desktop? I’m sticking with what works best for me.",
+      "author": "Ahmed Gaeedy",
+      "date": "2025-01-18T09:15:00Z",
+      "img": "/img1.jpg",
+      "isFeatured": true
+    },
+    "openai-vs-google-ai": {
+      "title": "OpenAI vs Google AI: Who’s Winning the Race?",
+      "content": "As artificial intelligence continues to reshape the global tech landscape, two companies remain at the forefront of innovation: OpenAI and Google. While their methods differ, both are racing to define what AI means for humanity, and who controls its future.\n\nOpenAI rose to prominence with the launch of ChatGPT, Codex, and later the GPT-5 model. Their focus has always been accessibility, safety, and alignment. OpenAI’s decision to provide public APIs, educational licenses, and integrations with platforms like Microsoft Office made AI tools accessible to millions.\n\nGoogle, on the other hand, has taken a more research-driven path. Through DeepMind and the newly rebranded Gemini division, they’ve prioritized breakthroughs in symbolic reasoning, reinforcement learning, and healthcare AI. Their release of Gemini Ultra, a hybrid AI model capable of solving logic problems and simulating scientific processes, was hailed as a leap forward in human-level problem-solving.\n\nThe two companies also differ in philosophy. OpenAI operates under a capped-profit model, with a stated mission to avoid centralizing AI power. Google, while responsible in many ways, integrates AI directly into its ad ecosystem and product suite, raising concerns about privacy, control, and monetization.\n\nUltimately, the competition between OpenAI and Google is less about winners and losers, and more about the trajectory of human-machine collaboration. If OpenAI represents the AI we can talk to, Google represents the AI that quietly powers our world. The future may depend on how we balance openness, innovation, and responsibility.",
+      "author": "Layla Monroe",
+      "date": "2025-02-02T10:00:00Z",
+      "img": "/img2.jpg",
+      "isFeatured": true
+    }
+  }
+}

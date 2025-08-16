@@ -1,7 +1,7 @@
 function About() {
     return (
-        <div className=" flex flex-col justify-between py-2">
-            <div className="font-medium pt-4 pb-2 ">About me</div>
+        <div className=" flex flex-col justify-between gap-2 ">
+            <div className="font-medium  ">About me</div>
 
             {/* <hr className="opacity-20 my-2.5"></hr> */}
 
