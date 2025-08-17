@@ -15,7 +15,7 @@ const Frontpage = () => {
                 <About/>
                 <Projects/>
                 <Tools/>
-                <div className="flex items-center gap-2 ">
+                <div className="flex items-center gap-2">
                     <Link
                         href="/blog"
                         className="flex items-center gap-2 text-neutral-400 hover:text-white transition-colors"

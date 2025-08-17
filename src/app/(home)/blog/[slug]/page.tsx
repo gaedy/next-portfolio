@@ -27,11 +27,24 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
         </div>
 
 
-            <article className=" py-2">
-                <h1 className="text-3xl font-bold mb-4">{post.title}</h1>
-                <p className="text-sm text-neutral-400 mb-6">
-                    By {post.author} • {new Date(post.date).toLocaleDateString()}
+            <article className=" py-2 flex flex-col gap-4 ">
+                <h1 className="text-3xl font-bold ">{post.title}</h1>
+
+
+
+                <p className="text-sm text-neutral-400 sm:flex-row flex-col items-start sm:items-center flex gap-2">
+                        <span >
+                          By {post.author}
+                        </span>
+                    <span className="sm:flex hidden">
+                          &bull;
+                        </span>
+                    <span>
+                          Published on {new Date(post.date).toLocaleDateString()}
+                        </span>
+
                 </p>
+                <hr className="opacity-20" />
                 {/*<Image src={post.img} alt={post.title} className="rounded-lg mb-6" />*/}
                 <p className="text-lg leading-7 whitespace-pre-line">{post.content}</p>
             </article>

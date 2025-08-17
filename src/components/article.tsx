@@ -20,11 +20,11 @@ export default function Article({ post, isPreview = false }: ArticleProps) {
 
                 <div className="flex flex-col gap-2 justify-between  ">
                     <h2 className="text-lg group-hover:underline ">{post.title}</h2>
-                    <p className="text-xs text-neutral-400 flex gap-2">
-                        <span>
+                    <p className="text-xs text-neutral-400 flex-wrap items-center flex gap-2">
+                        <span >
                           By {post.author}
                         </span>
-                        <span>
+                        <span className="sm:flex hidden">
                           &bull;
                         </span>
                         <span>

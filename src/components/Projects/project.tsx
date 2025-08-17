@@ -49,7 +49,7 @@ const Project: React.FC<ProjectProps> = ({project}) => {
             >
 
                 <div className="flex flex-col justify-between sm:flex-row gap-2 w-full">
-                    <div className="flex gap-2 flex-wrap hover:underline items-center">
+                    <div className="flex gap-2 flex-wrap group-hover:underline items-center">
                         <Link href={liveDemoLink} target={"_blank"}>
                             <span>{title}</span>
                         </Link>

@@ -76,7 +76,7 @@ function Profile() {
 
     return (
         <>
-            <div className="flex flex-col  justify-between py-2 pt-14">
+            <div className="flex flex-col justify-between gap-2 pt-14">
                 <div
                     className="relative h-16 w-16 p-0.5 rounded-full mb-2 overflow-hidden"
                     style={{
@@ -101,7 +101,7 @@ function Profile() {
                     <div className="h-full w-full bg-fuchsia-950 rounded-full" />
                 </div>
 
-                <div className="w-full flex items-center justify-between gap-1 flex-wrap">
+                <div className="w-full flex items-center justify-between  flex-wrap">
                     <div className="font-medium text-lg mr-auto flex">Ahmed Gaeedy</div>
 
                     <div className="flex gap-1 justify-between items-center ">
@@ -126,7 +126,7 @@ function Profile() {
                     </div>
                 </div>
 
-                <hr className="opacity-20 my-2.5"></hr>
+                <hr className="opacity-20 "></hr>
 
                 <div className="text-base text-[14px] text-neutral-400 text-balance">
                     Front-End Developer / UI Designer

@@ -1,11 +1,21 @@
 import type {Metadata} from "next";
-import {Outfit} from "next/font/google";
+import {Outfit, Readex_Pro, Vazirmatn } from "next/font/google";
 import "./globals.css";
 
 
 const outfit = Outfit({
     variable: "--font-outfit",
     subsets: ["latin"],
+});
+
+const readexPro = Readex_Pro({
+    variable: "--font-readexPro",
+    subsets: ["arabic"],
+});
+
+const vazirmatn = Vazirmatn({
+    variable: "--font-vazirmatn",
+    subsets: ["latin", "arabic"],
 });
 
 export const metadata: Metadata = {
@@ -21,7 +31,7 @@ export default function RootLayout({
     return (
         <html lang="en">
         <body
-            className={` ${outfit.variable} antialiased`}
+            className={` ${outfit.variable} ${readexPro.variable} ${vazirmatn.variable} antialiased`}
         >
         {children}
         </body>

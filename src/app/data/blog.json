@@ -9,7 +9,7 @@
       "isFeatured": false
     },
     "why-i-dont-use-linux": {
-      "title": "Why I Don't Use Linux on My Desktop PC",
+      "title": "لماذا لا أحب نظام التشغيل لينكس ؟",
       "content": "Let me start by saying this: I love Linux. I admire the community, the openness, the sheer power under the hood. But despite all that, I don't use it on my primary desktop. Here's why.\n\nFirst, the hardware compatibility issues. Even in 2025, getting Linux to play nicely with high-end GPUs, Wi-Fi adapters, or even fingerprint sensors can be a hassle. Sure, there are fixes—and I’ve spent hours on forums finding them—but that's time I’d rather spend being productive.\n\nThen there's the software. I’m a video editor and audio producer, and while open-source alternatives like Kdenlive and Ardour are impressive, they don’t match the reliability and integration of Adobe Premiere Pro or Ableton Live. Wine or virtual machines can bridge some of the gap, but it’s not seamless.\n\nI also find that while some distros aim to be user-friendly, they often still require terminal-level intervention for basic tasks. That’s great for learning, but frustrating when I just want something to work.\n\nLinux shines on servers, developer environments, and embedded systems. But for everyday creative and professional desktop work—at least in my experience—Windows and macOS still provide a more complete, out-of-the-box experience.\n\nAnd that's okay. I’ll continue to root for Linux from the sidelines, contribute to a few projects when I can, and run it on my Raspberry Pi. But for my main desktop? I’m sticking with what works best for me.",
       "author": "Ahmed Gaeedy",
       "date": "2025-01-18T09:15:00Z",
