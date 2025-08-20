@@ -9,11 +9,12 @@ export const projects = [
     isNew: true,
   },
   {
-    title: "Personal Portfolio",
-    description: "A showcase of my work, skills, and projects.",
-    githubLink: "https://github.com/gaedy/new-Portfolio",
-    technologies: ["javascript", "react", "tailwind"],
-    liveDemoLink: "https://test.com",
+    title: "Personal Portfolio - Showcasing My Work & Skills",
+    description:
+      "A responsive portfolio website that serves as a central hub for showcasing projects and skills and contact information.",
+    githubLink: "https://github.com/gaedy/next-portfolio",
+    technologies: ["typescript", "nextjs", "tailwind", "shadcn"],
+    liveDemoLink: "https://gaeedy.space",
     isNew: false,
   },
   {

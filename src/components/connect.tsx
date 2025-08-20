@@ -4,7 +4,7 @@ import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 
-import { MessageCircleMore } from "lucide-react";
+import { Ban, MessageCircleMore, ShieldX } from "lucide-react";
 import {
   Dialog,
   DialogTrigger,
@@ -40,7 +40,8 @@ export default function Connect() {
     reset,
   } = useForm<ContactForm>({
     resolver: zodResolver(contactSchema),
-    mode: "onTouched", // validate on blur/touch for nicer UX
+    mode: "onBlur", // validate on blur/touch for nicer UX
+    reValidateMode: "onChange",
   });
 
   // 3) Submit handler (replace with your API call)
@@ -87,7 +88,7 @@ export default function Connect() {
               aria-invalid={!!errors.name || undefined}
             />
             {errors.name && (
-              <p className="text-sm text-destructive">{errors.name.message}</p>
+              <p className="text-sm text-destructive ">{errors.name.message}</p>
             )}
           </div>
 

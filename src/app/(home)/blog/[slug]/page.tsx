@@ -1,7 +1,5 @@
 import { notFound } from "next/navigation";
 import blogData from "@/app/data/blog.json";
-import Link from "next/link";
-import { ArrowLeft } from "lucide-react";
 
 export default async function BlogPostPage({
   params,
@@ -14,29 +12,22 @@ export default async function BlogPostPage({
   if (!post) return notFound();
 
   return (
-    <>
-      <div className="sticky top-0 w-full bg-background flex items-center gap-2 mt-6 h-14 z-10">
-        <Link
-          href="/blog"
-          className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors"
-        >
-          <ArrowLeft size={16} />
-          Back to Blog
-        </Link>
+    <article className="py-2 flex flex-col gap-4">
+      <header>
+        <h1 className="text-2xl font-bold">{post.title}</h1>
+      </header>
+
+      <div className="text-sm text-muted-foreground sm:flex-row flex-col items-start sm:items-center flex gap-2">
+        <p>By {post.author}</p>
+        <span className="sm:flex hidden">&bull;</span>
+        <p>Published on {new Date(post.date).toLocaleDateString()}</p>
       </div>
 
-      <article className=" py-2 flex flex-col gap-4 ">
-        <h1 className="text-3xl font-bold ">{post.title}</h1>
+      <hr className="opacity-45 bg-ring " />
 
-        <p className="text-sm text-neutral-400 sm:flex-row flex-col items-start sm:items-center flex gap-2">
-          <span>By {post.author}</span>
-          <span className="sm:flex hidden">&bull;</span>
-          <span>Published on {new Date(post.date).toLocaleDateString()}</span>
-        </p>
-        <hr className="opacity-45 bg-ring "></hr>
-        {/*<Image src={post.img} alt={post.title} className="rounded-lg mb-6" />*/}
-        <p className="text-lg leading-7 whitespace-pre-line">{post.content}</p>
-      </article>
-    </>
+      <section className="text-lg leading-7 whitespace-pre-line">
+        {post.content}
+      </section>
+    </article>
   );
 }

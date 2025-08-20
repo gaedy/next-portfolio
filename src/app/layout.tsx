@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Outfit, Readex_Pro, Vazirmatn } from "next/font/google";
+import { Outfit, Vazirmatn } from "next/font/google";
 import "./globals.css";
 
 const outfit = Outfit({

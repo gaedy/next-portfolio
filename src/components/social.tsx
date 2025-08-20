@@ -1,13 +1,14 @@
 import { motion } from "motion/react";
-import { Behance, Github, Linkedin, Xicon } from "@/components/jsxIcons";
+import { Linkedin } from "@/components/jsxIcons";
+import { SiBehance, SiGithub, SiX } from "@icons-pack/react-simple-icons";
 
 export default function Social() {
   const mySocialIcons = [
-    { icon: <Xicon />, url: "https://x.com/" },
+    { icon: <SiX />, url: "https://x.com/" },
     // { icon: <DribbbleLine />, url: "https://dribbble.com/" },
-    { icon: <Behance />, url: "https://behance.com/" },
+    { icon: <SiBehance />, url: "https://behance.com/" },
     { icon: <Linkedin />, url: "https://linkedin.com/" },
-    { icon: <Github />, url: "https://github.com/gaedy" },
+    { icon: <SiGithub />, url: "https://github.com/gaedy" },
   ];
 
   const animation = (index: number) => ({
@@ -54,25 +55,23 @@ export default function Social() {
     } as const,
   });
   return (
-    <div>
-      <motion.div className="flex items-center gap-1">
-        {mySocialIcons.map((theIcon, index) => (
-          <motion.a
-            key={index}
-            {...animation(index)}
-            href={theIcon.url}
-            target="_blank"
-            rel="noopener noreferrer"
+    <motion.ul className="flex items-center gap-1">
+      {mySocialIcons.map((theIcon, index) => (
+        <motion.a
+          key={index}
+          {...animation(index)}
+          href={theIcon.url}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <li
+            className="bg-popover w-7 h-7 rounded-sm cursor-pointer hover:bg-input active:bg-card
+                  p-1.5 flex justify-center items-center transition-colors duration-200"
           >
-            <div
-              className="bg-neutral-800 w-7 h-7 rounded-sm cursor-pointer hover:bg-neutral-700 active:bg-neutral-900
-                  p-1 flex justify-center items-center transition-colors duration-200"
-            >
-              {theIcon.icon}
-            </div>
-          </motion.a>
-        ))}
-      </motion.div>
-    </div>
+            {theIcon.icon}
+          </li>
+        </motion.a>
+      ))}
+    </motion.ul>
   );
 }

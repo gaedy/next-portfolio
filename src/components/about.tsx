@@ -1,8 +1,10 @@
 function About() {
   return (
-    <section className="flex flex-col gap-2">
+    <section id="about" className="flex flex-col gap-2">
       {/* Heading */}
-      <h2 className=" text-foreground">About me</h2>
+      <header>
+        <h2 className="font-medium">About me</h2>
+      </header>
 
       {/* Content */}
       <div className="flex flex-col gap-2 text-muted-foreground leading-relaxed text-sm">

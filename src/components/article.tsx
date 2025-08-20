@@ -15,16 +15,17 @@ type ArticleProps = {
 export default function Article({ post, isPreview = false }: ArticleProps) {
   return (
     <Link href={`/blog/${post.slug}`}>
-      <div className=" group transition rounded-xl">
-        <div className="flex flex-col gap-2 justify-between  ">
-          <h2 className="text-lg group-hover:underline ">{post.title}</h2>
-          <p className="text-xs text-neutral-400 flex-wrap items-center flex gap-2">
-            <span>By {post.author}</span>
-            <span className="sm:flex hidden">&bull;</span>
-            <span>{new Date(post.date).toLocaleDateString()}</span>
-          </p>
+      <article className="flex flex-col gap-2 group">
+        <header>
+          <h1 className="group-hover:underline font-medium ">{post.title}</h1>
+        </header>
+
+        <div className="text-xs text-muted-foreground flex-wrap items-center flex gap-2">
+          <p>By {post.author}</p>
+          <span className="sm:flex hidden">&bull;</span>
+          <p>{new Date(post.date).toLocaleDateString()}</p>
         </div>
-      </div>
+      </article>
     </Link>
   );
 }
