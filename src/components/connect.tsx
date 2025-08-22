@@ -4,7 +4,7 @@ import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 
-import { Ban, MessageCircleMore, ShieldX } from "lucide-react";
+import { MessageCircleMore } from "lucide-react";
 import {
   Dialog,
   DialogTrigger,
@@ -19,6 +19,7 @@ import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import { toast } from "sonner";
 
 // 1) Zod schema
 const contactSchema = z.object({
@@ -32,7 +33,6 @@ const contactSchema = z.object({
 type ContactForm = z.infer<typeof contactSchema>;
 
 export default function Connect() {
-  // 2) RHF setup with Zod
   const {
     register,
     handleSubmit,
@@ -40,18 +40,44 @@ export default function Connect() {
     reset,
   } = useForm<ContactForm>({
     resolver: zodResolver(contactSchema),
-    mode: "onBlur", // validate on blur/touch for nicer UX
+    mode: "onChange", // validate on blur/touch for nicer UX
     reValidateMode: "onChange",
   });
 
-  // 3) Submit handler (replace with your API call)
   const onSubmit = async (data: ContactForm) => {
     try {
-      // Example: await fetch("/api/contact", { method: "POST", body: JSON.stringify(data) });
-      console.log("Contact form submitted:", data);
-      reset();
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+
+      const result = await res.json();
+
+      if (result.success) {
+        toast.success(
+          <div>
+            <p className="font-medium">Message sent!</p>
+            <p>Your message has been sent successfully.</p>
+          </div>
+        );
+        reset();
+      } else {
+        toast.error(
+          <div>
+            <p className="font-medium">Failed to send message</p>
+            <p>Please try again later.</p>
+          </div>
+        );
+      }
     } catch (err) {
       console.error("Failed to submit contact form:", err);
+      toast.error(
+        <div>
+          <p className="font-medium">Something went wrong</p>
+          <p>Please try again later.</p>
+        </div>
+      );
     }
   };
 
@@ -73,7 +99,6 @@ export default function Connect() {
           </DialogDescription>
         </DialogHeader>
 
-        {/* 4) Hook up handleSubmit */}
         <form
           className="flex-col flex gap-4"
           onSubmit={handleSubmit(onSubmit)}

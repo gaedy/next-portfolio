@@ -52,9 +52,10 @@ export default function ProfileImage() {
       <Image
         alt="profile"
         src="/avatar.jpg"
-        fill
         priority
-        className="object-cover w-full h-full p-0.5 rounded-full"
+        width={256}
+        height={256}
+        className="rounded-full object-fill "
       ></Image>
     </motion.div>
   );

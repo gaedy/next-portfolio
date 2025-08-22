@@ -7,7 +7,7 @@ function About() {
       </header>
 
       {/* Content */}
-      <div className="flex flex-col gap-2 text-muted-foreground leading-relaxed text-sm">
+      <div className="flex flex-col gap-2 text-muted-foreground leading-relaxed  text-sm">
         <p>
           I&apos;m Ahmed, a passionate Front-End Developer and UI Designer with
           a keen eye for aesthetics and functionality. I specialize in creating

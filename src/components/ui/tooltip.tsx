@@ -1,78 +1,61 @@
-"use client";
+"use client"
 
-import React, { useState, ReactNode } from "react";
-import { AnimatePresence, motion } from "motion/react";
+import * as React from "react"
+import * as TooltipPrimitive from "@radix-ui/react-tooltip"
 
-type TooltipPosition = "top" | "bottom" | "left" | "right";
+import { cn } from "@/lib/utils"
 
-interface TooltipProps {
-  children: ReactNode;
-  content: ReactNode;
-  position?: TooltipPosition;
+function TooltipProvider({
+  delayDuration = 0,
+  ...props
+}: React.ComponentProps<typeof TooltipPrimitive.Provider>) {
+  return (
+    <TooltipPrimitive.Provider
+      data-slot="tooltip-provider"
+      delayDuration={delayDuration}
+      {...props}
+    />
+  )
 }
 
-const Tooltip: React.FC<TooltipProps> = ({
-  children,
-  content,
-  position = "top",
-}) => {
-  const [isShow, setIsShow] = useState(false);
-
-  const handleClose = () => {
-    setIsShow(false);
-  };
-
-  const handleHover = () => {
-    setIsShow(true);
-  };
-
-  const positionClasses: Record<TooltipPosition, string> = {
-    top: "bottom-full left-1/2 -translate-x-1/2 mb-2",
-    bottom: "top-full left-1/2 -translate-x-1/2 mt-2",
-    left: "right-full top-1/2 -translate-y-1/2 mr-2",
-    right: "left-full top-1/2 -translate-y-1/2 ml-2",
-  };
-
-  const arrowClasses: Record<TooltipPosition, string> = {
-    top: "bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 rotate-45",
-    bottom: "top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 rotate-45",
-    left: "right-0 top-1/2 -translate-y-1/2 translate-x-1/2 rotate-45",
-    right: "left-0 top-1/2 -translate-y-1/2 -translate-x-1/2 rotate-45",
-  };
-
+function Tooltip({
+  ...props
+}: React.ComponentProps<typeof TooltipPrimitive.Root>) {
   return (
-    <div
-      className="relative inline-block"
-      onMouseEnter={handleHover}
-      onMouseLeave={handleClose}
-    >
-      {children}
+    <TooltipProvider>
+      <TooltipPrimitive.Root data-slot="tooltip" {...props} />
+    </TooltipProvider>
+  )
+}
 
-      <AnimatePresence>
-        {isShow && (
-          <motion.div
-            className={`absolute ${positionClasses[position]} z-50`}
-            initial={{ opacity: 0, translateY: -5 }}
-            animate={{ opacity: 1, translateY: 1 }}
-            exit={{ opacity: 0, translateY: -3 }}
-            transition={{
-              opacity: { duration: 0.1, ease: "easeIn" },
-              translateY: { duration: 0.2, ease: "easeOut" },
-            }}
-          >
-            <div className="relative">
-              <div className="bg-neutral-800 min-w-8 text-white text-sm p-2 flex justify-center items-center rounded-md whitespace-nowrap">
-                {content}
-              </div>
-              <div
-                className={`absolute w-2 h-2 bg-neutral-800 ${arrowClasses[position]}`}
-              />
-            </div>
-          </motion.div>
+function TooltipTrigger({
+  ...props
+}: React.ComponentProps<typeof TooltipPrimitive.Trigger>) {
+  return <TooltipPrimitive.Trigger data-slot="tooltip-trigger" {...props} />
+}
+
+function TooltipContent({
+  className,
+  sideOffset = 0,
+  children,
+  ...props
+}: React.ComponentProps<typeof TooltipPrimitive.Content>) {
+  return (
+    <TooltipPrimitive.Portal>
+      <TooltipPrimitive.Content
+        data-slot="tooltip-content"
+        sideOffset={sideOffset}
+        className={cn(
+          "bg-primary text-primary-foreground animate-in fade-in-0 zoom-in-95 data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=closed]:zoom-out-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2 z-50 w-fit origin-(--radix-tooltip-content-transform-origin) rounded-md px-3 py-1.5 text-xs text-balance",
+          className
         )}
-      </AnimatePresence>
-    </div>
-  );
-};
+        {...props}
+      >
+        {children}
+        <TooltipPrimitive.Arrow className="bg-primary fill-primary z-50 size-2.5 translate-y-[calc(-50%_-_2px)] rotate-45 rounded-[2px]" />
+      </TooltipPrimitive.Content>
+    </TooltipPrimitive.Portal>
+  )
+}
 
-export default Tooltip;
+export { Tooltip, TooltipTrigger, TooltipContent, TooltipProvider }

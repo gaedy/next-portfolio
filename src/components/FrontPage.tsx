@@ -9,6 +9,8 @@ import Tools from "./Tools/tools";
 const Frontpage = () => {
   return (
     <div className="flex flex-col gap-8">
+
+     
       <Profile />
       <About />
       <Projects />

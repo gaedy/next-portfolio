@@ -1,7 +1,7 @@
-// components/Project.tsx
 "use client";
 import { ExternalLink, Github } from "lucide-react";
 import {
+  SiGithub,
   SiJavascript,
   SiLucide,
   SiNextdotjs,
@@ -62,30 +62,31 @@ const Project: React.FC<ProjectProps> = ({ project }) => {
       />
 
       <div className="flex flex-col justify-between sm:flex-row gap-2 w-full">
-        <div className="flex gap-2 flex-wrap group-hover:underline items-center font-medium">
+        <header>
           <Link href={liveDemoLink} target={"_blank"}>
-            <h3>{title}</h3>
+            <div className="flex items-center group-hover:underline gap-1.5 font-medium">
+              <h2>{title}</h2>
+              <ExternalLink
+                size={16}
+                className="sm:opacity-0 shrink-0 opacity-100 transition-opacity duration-300 group-hover:opacity-100"
+              />
+            </div>
           </Link>
+        </header>
 
-          <ExternalLink
-            size={16}
-            className=" sm:opacity-0 opacity-100 transition-opacity duration-300 group-hover:opacity-100"
-          />
-        </div>
-
-        <div className="flex gap-2  justify-between items-center">
+        <div className="flex gap-2 h-fit justify-between items-center">
           {githubLink && (
             <Link
               href={githubLink}
               target={"_blank"}
-              className="opacity-80 group-hover:opacity-100 z-10 transition-all hover:scale-105 active:scale-100 duration-300 bg-popover group-hover:bg-neutral-900
-                                hover:bg-input text-xs w-fit h-full p-1 px-2 rounded-full flex justify-between items-center cursor-pointer gap-1 pointer-events-auto"
+              className="opacity-80 group-hover:opacity-100  z-10 transition-all hover:scale-105 active:scale-100 duration-300 bg-popover group-hover:bg-neutral-900
+                                hover:bg-input text-xs w-fit h-full p-1 px-1.5 rounded-full flex justify-between items-center cursor-pointer gap-1.5 pointer-events-auto"
             >
-              <Github size={16} />
+              <SiGithub size={14} />
               <p>Github</p>
             </Link>
           )}
-          <div className="flex gap-1.5 transition-opacity duration-300 group-hover:opacity-100 opacity-80 items-center">
+          <div className="flex gap-1.5 transition-opacity flex-wrap duration-300 group-hover:opacity-100 opacity-80 items-center">
             {technologies.map((tech, index) => {
               const Icon = iconMap[tech];
               return Icon ? <Icon key={index} size={18} /> : null;

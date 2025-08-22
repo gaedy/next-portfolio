@@ -4,6 +4,7 @@ import Available from "./available";
 import Connect from "./connect";
 import ProfileImage from "./profileImage";
 import Social from "./social";
+import { Tooltip, TooltipContent, TooltipTrigger } from "./ui/tooltip";
 
 function Profile() {
   return (
@@ -17,7 +18,18 @@ function Profile() {
         <h1 className="font-medium text-lg">Ahmed Gaeedy</h1>
 
         <div className="mr-auto flex items-center gap-2">
-          <Connect />
+          <Tooltip>
+            <TooltipTrigger>
+
+   
+             
+              <Connect />
+            </TooltipTrigger>
+            <TooltipContent className="font-medium">
+              <p>Contact me</p>
+            </TooltipContent>
+          </Tooltip>
+
           <Available color="green" />
         </div>
 

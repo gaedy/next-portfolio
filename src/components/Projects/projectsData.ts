@@ -1,6 +1,6 @@
 export const projects = [
   {
-    title: "Smart Chapters - Reading Tracker",
+    title: "Smart Chapters - Book Reading Tracker",
     description:
       "A platform for tracking reading progress, reviewing books, and write meaningful reviews.",
     githubLink: "https://github.com/gaedy/smart-chapters",
