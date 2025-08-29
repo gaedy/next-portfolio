@@ -363,4 +363,3 @@ export function Cinema4d2() {
     </svg>
   );
 }
-

@@ -9,18 +9,17 @@ function About() {
       {/* Content */}
       <div className="flex flex-col gap-2 text-muted-foreground leading-relaxed  text-sm">
         <p>
-          I&apos;m Ahmed, a passionate Front-End Developer and UI Designer with
-          a keen eye for aesthetics and functionality. I specialize in creating
-          visually compelling and user-friendly digital experiences, blending
-          creativity with technical expertise.
+          I&apos;m Ahmed, a Front-End Developer and UI Designer passionate about
+          crafting visually stunning and intuitive digital experiences. I
+          combine creativity with technical expertise to deliver interfaces that
+          are both beautiful and highly functional.
         </p>
 
         <p>
-          I thrive on problem-solving, collaboration, and continuous learning,
-          always staying updated with the latest design and development trends.
-          I&apos;m also actively building personal projects to sharpen my
-          skills, experiment with new technologies, and bring creative ideas to
-          life.
+          I love problem-solving, collaborating with others, and staying on top
+          of the latest design and development trends. In my spare time, I work
+          on personal projects to experiment with new technologies, refine my
+          skills, and bring fresh ideas to life.
         </p>
       </div>
     </section>

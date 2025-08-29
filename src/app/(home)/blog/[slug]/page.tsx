@@ -5,12 +5,13 @@ import ReactMarkdown from "react-markdown";
 import { Metadata } from "next";
 
 type Props = {
-  params: { slug: string };
+  params: Promise<{ slug: string }>; // Updated type to reflect Promise
 };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const post =
-    blogData.blogPosts[params.slug as keyof typeof blogData.blogPosts];
+  const { slug } = await params; // Await params before accessing properties
+
+  const post = blogData.blogPosts[slug as keyof typeof blogData.blogPosts];
 
   if (!post) return { title: "Blog | Ahmed Gaeedy" };
 
@@ -36,7 +37,7 @@ export default async function BlogPostPage({
   });
 
   return (
-    <article className="py-2 flex flex-col gap-4 font-merriweather">
+    <article className="py-2 flex flex-col gap-4">
       <header>
         <h1 className="text-3xl font-bold">{post.title}</h1>
       </header>
@@ -49,7 +50,7 @@ export default async function BlogPostPage({
 
       <hr className="opacity-60 bg-ring " />
 
-      <section className="prose-dark ">
+      <section className="prose-dark font-merriweather">
         <ReactMarkdown>{post.content}</ReactMarkdown>
       </section>
     </article>

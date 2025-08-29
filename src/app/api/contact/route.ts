@@ -26,7 +26,7 @@ export async function POST(req: Request) {
 
     return NextResponse.json({ success: true });
   } catch (err: unknown) {
-    // Type narrowing
+   
     let errorMessage = "Unknown error";
     if (err instanceof Error) {
       errorMessage = err.message;

@@ -12,7 +12,7 @@ function Profile() {
       id="site-header"
       className="flex flex-col justify-between gap-2 pt-14"
     >
-      <ProfileImage />
+      {/* <ProfileImage /> */}
 
       <div className="w-full flex items-center gap-2 justify-between flex-wrap">
         <h1 className="font-medium text-lg">Ahmed Gaeedy</h1>
@@ -20,9 +20,6 @@ function Profile() {
         <div className="mr-auto flex items-center gap-2">
           <Tooltip>
             <TooltipTrigger>
-
-   
-             
               <Connect />
             </TooltipTrigger>
             <TooltipContent className="font-medium">

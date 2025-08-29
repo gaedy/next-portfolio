@@ -3,8 +3,7 @@
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
-
-import { MessageCircleMore } from "lucide-react";
+import { Mail } from "lucide-react";
 import {
   Dialog,
   DialogTrigger,
@@ -21,13 +20,31 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { toast } from "sonner";
 
-// 1) Zod schema
-const contactSchema = z.object({
-  name: z.string().min(3, "Please enter at least 3 characters."),
-  email: z.string().email("Please enter a valid email address."),
+export const contactSchema = z.object({
+  name: z
+    .string()
+    .min(2, "Name must be at least 2 characters.")
+    .max(80, "Name must be under 80 characters.")
+    .regex(
+      /^[a-zA-Z\s\u0600-\u06FF]+$/,
+      "Name can only include letters and spaces."
+    )
+    .optional()
+    .or(z.literal("")),
+
+  email: z.email("Enter a valid email address so we can reach you."),
   message: z
     .string()
-    .min(10, "Your message should be at least 10 characters long."),
+    .min(10, "Message must be at least 10 characters.")
+    .max(2000, "Message must be under 2000 characters.")
+    .refine(
+      (msg) => msg.trim().split(" ").length >= 3,
+      "Message should include at least 3 words."
+    )
+    .refine(
+      (msg) => !/^(.)\1{9,}/.test(msg),
+      "Avoid using the same character too many times."
+    ),
 });
 
 type ContactForm = z.infer<typeof contactSchema>;
@@ -40,7 +57,7 @@ export default function Connect() {
     reset,
   } = useForm<ContactForm>({
     resolver: zodResolver(contactSchema),
-    mode: "onChange", // validate on blur/touch for nicer UX
+    mode: "onChange",
     reValidateMode: "onChange",
   });
 
@@ -56,27 +73,27 @@ export default function Connect() {
 
       if (result.success) {
         toast.success(
-          <div>
-            <p className="font-medium">Message sent!</p>
+          <>
+            <p>Message sent</p>
             <p>Your message has been sent successfully.</p>
-          </div>
+          </>
         );
         reset();
       } else {
         toast.error(
-          <div>
-            <p className="font-medium">Failed to send message</p>
+          <>
+            <p>Failed to send message</p>
             <p>Please try again later.</p>
-          </div>
+          </>
         );
       }
     } catch (err) {
       console.error("Failed to submit contact form:", err);
-      toast.error(
-        <div>
-          <p className="font-medium">Something went wrong</p>
+      toast.warning(
+        <>
+          <p>Something went wrong</p>
           <p>Please try again later.</p>
-        </div>
+        </>
       );
     }
   };
@@ -84,9 +101,9 @@ export default function Connect() {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <MessageCircleMore
+        <Mail
           className="hover:scale-105 active:scale-100 transition-transform cursor-pointer"
-          size={18}
+          size={19}
         />
       </DialogTrigger>
 
@@ -94,8 +111,8 @@ export default function Connect() {
         <DialogHeader>
           <DialogTitle>Send Me a Message</DialogTitle>
           <DialogDescription>
-            Feel free to reach out! Fill in the form below and I’ll get back to
-            you as soon as possible.
+            Feel free to reach out! Fill in the form below and I&apos;ll get
+            back to you as soon as possible.
           </DialogDescription>
         </DialogHeader>
 
@@ -105,10 +122,10 @@ export default function Connect() {
           noValidate
         >
           <div className="flex flex-col gap-2">
-            <Label htmlFor="name">Name</Label>
+            <Label htmlFor="name">Name (optional)</Label>
             <Input
               id="name"
-              placeholder="Your full name"
+              placeholder="e.g. Mohamed Salah"
               {...register("name")}
               aria-invalid={!!errors.name || undefined}
             />
