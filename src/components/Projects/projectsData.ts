@@ -32,7 +32,7 @@ export const projects = [
       "A React-based ChatGPT clone that replicates the core functionality and user interface.",
     githubLink: "https://github.com/gaedy/ChatGPT-Clone",
     technologies: ["javascript", "react", "tailwind", "redux"],
-    liveDemoLink: "https://test.com",
+    liveDemoLink: "https://chat-gpt-clone-umber.vercel.app/",
     isNew: false,
   },
 ];
