@@ -65,7 +65,7 @@ const Project: React.FC<ProjectProps> = ({ project }) => {
         <header>
           <Link href={liveDemoLink} target={"_blank"}>
             <div className="flex items-center group-hover:underline gap-1.5 font-medium">
-              <h2>{title}</h2>
+              <h2 className="truncate">{title}</h2>
               <ExternalLink
                 size={16}
                 className="sm:opacity-0 shrink-0 opacity-100 transition-opacity duration-300 group-hover:opacity-100"

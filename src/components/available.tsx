@@ -1,3 +1,5 @@
+import { AnimatePresence, motion } from "motion/react";
+
 type Props = {
   color: "green" | "orange" | "red";
 };
@@ -10,14 +12,25 @@ const availableColors: Record<Props["color"], string> = {
 
 export default function Available({ color }: Props) {
   return (
-    <div
-      className="flex bg-green-900 pointer-events-none select-none text-green-200
-     rounded-full gap-1.5 p-1 px-2 items-center text-xs"
-    >
-      <div
-        className={`rounded-full w-1.5 h-1.5 ${availableColors[color]}`}
-      ></div>
-      <p>Available For Work</p>
-    </div>
+    <AnimatePresence mode="wait">
+      <motion.div
+        initial={{ width: 0, opacity: 0, scale: 0.7 }}
+        animate={{ width: 130, opacity: 1, scale: 1 }}
+        transition={{
+          type: "spring",
+          stiffness: 120,
+          damping: 18,
+          mass: 1,
+          ease: "anticipate",
+        }}
+        className="bg-green-900 brightness-95 pointer-events-none select-none text-green-200 
+      rounded-full p-1 px-2 text-xs flex items-center gap-1.5 overflow-hidden"
+      >
+        <div
+          className={`rounded-full w-1.5 h-1.5   flex-shrink-0 ${availableColors[color]}`}
+        ></div>
+        <p className="whitespace-nowrap">Available For Work</p>
+      </motion.div>
+    </AnimatePresence>
   );
 }
