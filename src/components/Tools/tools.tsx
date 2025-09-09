@@ -14,6 +14,8 @@ import {
   SiJavascript,
   SiLucide,
   SiNextdotjs,
+  SiPostgresql,
+  SiPrisma,
   SiReact,
   SiRedux,
   SiShadcnui,
@@ -38,6 +40,8 @@ const Tools: React.FC = () => {
     { icon: <SiRedux />, name: "Redux" },
     { icon: <SiShadcnui />, name: "Shadcn UI" },
     { icon: <SiLucide />, name: "Lucide icons" },
+    { icon: <SiPrisma />, name: "Prisma" },
+    { icon: <SiPostgresql />, name: "Postgresql" },
   ];
   const myUiTools: ToolItem[] = [
     { icon: <SiBlender />, name: "Blender" },
