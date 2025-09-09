@@ -26,8 +26,7 @@ function Profile() {
               <p>Contact me</p>
             </TooltipContent>
           </Tooltip>
-
-          <Available color="green" />
+          
         </div>
 
         <nav aria-label="Social links">
@@ -39,9 +38,12 @@ function Profile() {
 
       <hr className="opacity-45 bg-ring" />
 
-      <p className="text-sm font-medium text-muted-foreground text-balance">
-        Front-End Developer / UI Designer
-      </p>
+      <div className="flex justify-start items-center gap-2 w-full flex-wrap">
+        <p className="text-sm font-medium text-muted-foreground text-balance">
+          Front-End Developer
+        </p>
+        <Available color="green" />
+      </div>
     </header>
   );
 }
