@@ -5,6 +5,7 @@ import Projects from "@/components/Projects/projects";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import Tools from "./Tools/tools";
+import { Button } from "./ui/button";
 
 const Frontpage = () => {
   return (
@@ -14,13 +15,12 @@ const Frontpage = () => {
       <Projects />
       <Tools />
       <section className="flex items-center gap-2">
-        <Link
-          href="/blog"
-          aria-label="Read my blog articles"
-          className="flex items-center font-medium gap-2 text-muted-foreground hover:text-foreground transition-colors"
-        >
-          View Blogs
-          <ArrowRight size={16} aria-hidden="true" />
+        <Link href="/blog" aria-label="Read my blog articles">
+          {" "}
+          <Button className="cursor-pointer" variant="secondary" size="default">
+            View Blogs
+            <ArrowRight size={16} aria-hidden="true" />
+          </Button>
         </Link>
       </section>
     </div>

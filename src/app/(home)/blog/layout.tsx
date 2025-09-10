@@ -1,4 +1,5 @@
 "use client";
+import { Button } from "@/components/ui/button";
 import { ArrowLeft } from "lucide-react";
 import { motion } from "motion/react";
 import Link from "next/link";
@@ -28,13 +29,12 @@ export default function BlogLayout({
       className="max-w-2xl px-4 mx-auto flex flex-col justify-center"
     >
       <div className="sticky bg-background top-0 text-sm w-full py-4  mt-4 h-fit flex items-center justify-between gap-2 z-10">
-        <Link
-          href={pathname === "/blog" ? "/" : "/blog"}
-          className="flex items-center font-medium gap-2 p-2 rounded-lg bg-popover hover:bg-input text-muted-foreground hover:text-foreground transition-colors"
-        >
-          <ArrowLeft size={16} />
+        <Link href={pathname === "/blog" ? "/" : "/blog"}>
+          <Button variant="secondary" className="cursor-pointer">
+            <ArrowLeft size={16} />
 
-          <h2>{pathname === "/blog" ? "Back to Home" : "Back to Blogs"}</h2>
+            {pathname === "/blog" ? "Back to Home" : "Back to Blogs"}
+          </Button>
         </Link>
       </div>
 

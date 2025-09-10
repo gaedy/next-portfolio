@@ -1,10 +1,8 @@
 "use client";
 
-import Available from "./available";
 import Connect from "./connect";
 import ProfileImage from "./profileImage";
 import Social from "./social";
-import { Tooltip, TooltipContent, TooltipTrigger } from "./ui/tooltip";
 
 function Profile() {
   return (
@@ -12,37 +10,20 @@ function Profile() {
       id="site-header"
       className="flex flex-col justify-between gap-2 pt-14"
     >
-      {/* <ProfileImage /> */}
+      <ProfileImage />
 
-      <div className="w-full flex items-center gap-2 justify-between flex-wrap">
-        <h1 className="font-medium text-lg">Ahmed Gaeedy</h1>
-
-        <div className="mr-auto flex items-center gap-2">
-          <Tooltip>
-            <TooltipTrigger>
-              <Connect />
-            </TooltipTrigger>
-            <TooltipContent className="font-medium">
-              <p>Contact me</p>
-            </TooltipContent>
-          </Tooltip>
-          
-        </div>
-
-        <nav aria-label="Social links">
-          <div className="flex gap-1 items-center">
-            <Social />
-          </div>
-        </nav>
+      <div className="w-full flex  items-center flex-wrap gap-2 justify-between ">
+        <h1 className="font-medium shrink-0 text-lg ">Ahmed Gaeedy</h1>
+        <Connect />
       </div>
 
       <hr className="opacity-45 bg-ring" />
 
-      <div className="flex justify-start items-center gap-2 w-full flex-wrap">
-        <p className="text-sm font-medium text-muted-foreground text-balance">
+      <div className="flex justify-between items-center flex-wrap gap-2 text-sm">
+        <p className="text-muted-foreground text-balance font-medium">
           Front-End Developer
         </p>
-        <Available color="green" />
+        <Social />
       </div>
     </header>
   );

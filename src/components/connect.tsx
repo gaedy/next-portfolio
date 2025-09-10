@@ -19,6 +19,7 @@ import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { toast } from "sonner";
+import { AnimatePresence, motion } from "motion/react";
 
 export const contactSchema = z.object({
   name: z
@@ -100,12 +101,32 @@ export default function Connect() {
 
   return (
     <Dialog>
-      <DialogTrigger asChild>
-        <Mail
-          className="hover:scale-105 active:scale-100 transition-transform cursor-pointer"
-          size={19}
-        />
-      </DialogTrigger>
+      <AnimatePresence mode="wait">
+        <motion.div
+          initial={{ width: 0, opacity: 0.5, scale: 0.6, translateX: 40 }}
+          animate={{ width: 105, opacity: 1, scale: 1, translateX: 0 }}
+          exit={{ width: 0, opacity: 0, scale: 1, translateX: 0 }}
+          transition={{
+            type: "spring",
+            stiffness: 120,
+            damping: 15,
+            mass: 1,
+            ease: "anticipate",
+          }}
+          className="overflow-hidden"
+        >
+          <DialogTrigger asChild>
+            <Button
+              className="text-xs w-full cursor-pointer flex justify-start"
+              variant="secondary"
+              size="sm"
+            >
+              <Mail className="" />
+              Contact me
+            </Button>
+          </DialogTrigger>
+        </motion.div>
+      </AnimatePresence>
 
       <DialogContent>
         <DialogHeader>

@@ -56,7 +56,7 @@ export default function Social() {
     } as const,
   });
   return (
-    <motion.ul className="flex items-center gap-1">
+    <ul className="flex items-center gap-1">
       {mySocialIcons.map((theIcon, index) => (
         <motion.a
           key={index}
@@ -65,14 +65,16 @@ export default function Social() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <li
-            className="bg-popover w-7 h-7 rounded-sm cursor-pointer hover:bg-input active:bg-card
-                  p-1.5 flex justify-center items-center transition-colors duration-200"
+          <Button
+            variant="secondary"
+            size="icon"
+            className=" h-8 w-8 cursor-pointer
+                    transition-colors duration-200"
           >
             {theIcon.icon}
-          </li>
+          </Button>
         </motion.a>
       ))}
-    </motion.ul>
+    </ul>
   );
 }

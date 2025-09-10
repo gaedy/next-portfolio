@@ -22,40 +22,23 @@ export default function ProfileImage() {
         duration: 0.4,
         type: "spring",
         stiffness: 120,
-        damping: 13,
+        damping: 14,
       }}
-      className="relative h-16 w-16 p-0.5 rounded-full mb-2 overflow-hidden"
+      className="relative h-16 w-16 p-0.5 rounded-full overflow-hidden"
       style={{
         backgroundImage: `linear-gradient(${
           position * 3.6
-        }deg, #30E8BF, #FF8235, #FC466B)`,
+        }deg, #E81CFF, #FF6A00, #40C9FF)`,
         backgroundSize: "200% 200%",
-        animation: "moveGradient 3s ease infinite",
+        animation: "moveGradient 3s easeOut infinite",
       }}
     >
-      <style jsx>
-        {`
-          @keyframes moveGradient {
-            0% {
-              background-position: 0% 50%;
-            }
-            50% {
-              background-position: 100% 50%;
-            }
-            100% {
-              background-position: 0% 50%;
-            }
-          }
-        `}
-      </style>
-
       <Image
         alt="profile"
         src="/avatar2.jpg"
         priority
         width={256}
         height={256}
-        
         className="rounded-full object-fill "
       ></Image>
     </motion.div>
