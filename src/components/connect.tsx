@@ -101,32 +101,30 @@ export default function Connect() {
 
   return (
     <Dialog>
-      <AnimatePresence mode="wait">
-        <motion.div
-          initial={{ width: 0, opacity: 0.5, scale: 0.6, translateX: 40 }}
-          animate={{ width: 105, opacity: 1, scale: 1, translateX: 0 }}
-          exit={{ width: 0, opacity: 0, scale: 1, translateX: 0 }}
-          transition={{
-            type: "spring",
-            stiffness: 120,
-            damping: 15,
-            mass: 1,
-            ease: "anticipate",
-          }}
-          className="overflow-hidden"
-        >
-          <DialogTrigger asChild>
-            <Button
-              className="text-xs w-full cursor-pointer flex justify-start"
-              variant="secondary"
-              size="sm"
-            >
-              <Mail className="" />
-              Contact me
-            </Button>
-          </DialogTrigger>
-        </motion.div>
-      </AnimatePresence>
+      <motion.div
+        initial={{ width: 0, opacity: 0.2, scale: 0.3 }}
+        animate={{ width: 105, opacity: 1, scale: 1 }}
+        exit={{ width: 0, opacity: 0, scale: 1 }}
+        transition={{
+          type: "spring",
+          stiffness: 150,
+          damping: 18,
+          mass: 1,
+          ease: "anticipate",
+        }}
+        className="overflow-hidden"
+      >
+        <DialogTrigger asChild>
+          <Button
+            className="text-xs w-full cursor-pointer flex justify-start"
+            variant="secondary"
+            size="sm"
+          >
+            <Mail />
+            Contact me
+          </Button>
+        </DialogTrigger>
+      </motion.div>
 
       <DialogContent>
         <DialogHeader>
