@@ -3,11 +3,13 @@ function About() {
     <section id="about" className="flex  flex-col gap-2">
       {/* Heading */}
       <header>
-        <h2 className="font-medium">About me</h2>
+        <h2 className="font-medium ml-6">About me</h2>
       </header>
 
       {/* Content */}
-      <div className="flex flex-col  gap-2 text-muted-foreground leading-relaxed  text-sm">
+
+
+      <div className="flex flex-col bg-card border border-border p-6 rounded-3xl  gap-2 text-muted-foreground leading-relaxed  text-sm">
         <p>
           I&apos;m Ahmed, a Front-End Developer and UI Designer passionate about
           crafting visually stunning and intuitive digital experiences. I

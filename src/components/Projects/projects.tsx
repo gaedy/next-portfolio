@@ -1,7 +1,5 @@
 import { projects } from "@/components/Projects/projectsData";
 import Project from "@/components/Projects/project";
-import { Button } from "../ui/button";
-import { ArrowRight } from "lucide-react";
 
 function Projects() {
   return (

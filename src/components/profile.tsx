@@ -8,7 +8,7 @@ function Profile() {
   return (
     <header
       id="site-header"
-      className="flex flex-col justify-between gap-2 pt-14"
+      className="flex mt-12 flex-col bg-card justify-between gap-2 p-6 rounded-3xl border border-border"
     >
       {/* <ProfileImage /> */}
 
