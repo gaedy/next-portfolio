@@ -5,7 +5,7 @@ import { Button } from "./ui/button";
 
 export default function Social() {
   const mySocialIcons = [
-    { icon: <SiX />, url: "https://x.com/" },
+    // { icon: <SiX />, url: "https://x.com/" },
     // { icon: <DribbbleLine />, url: "https://dribbble.com/" },
     { icon: <SiBehance />, url: "https://behance.com/" },
     { icon: <Linkedin />, url: "https://linkedin.com/" },
@@ -68,10 +68,12 @@ export default function Social() {
           <Button
             variant="secondary"
             size="icon"
-            className=" h-8 w-8 cursor-pointer
-                    transition-colors duration-200"
+            className=" h-8 w-8 rounded-full cursor-pointer
+                    transition-colors duration-200 group hover:bg-accent"
           >
-            {theIcon.icon}
+            <div className="scale-95 opacity-70 transition-colors duration-200 group-hover:opacity-100 ">
+              {theIcon.icon}
+            </div>
           </Button>
         </motion.a>
       ))}

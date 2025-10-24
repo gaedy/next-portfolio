@@ -24,7 +24,7 @@ export function ToolSection({ title, tools }: ToolSectionProps) {
         {tools.map((tool, index) => (
           <Tooltip key={index}>
             <TooltipTrigger>
-              <li className="w-14 p-4.5 h-14 bg-popover flex items-center justify-center rounded-lg">
+              <li className="w-14 p-4.5 h-14 bg-secondary flex items-center justify-center rounded-lg">
                 {tool.icon}
               </li>
             </TooltipTrigger>

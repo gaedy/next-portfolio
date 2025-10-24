@@ -3,7 +3,7 @@
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { Mail } from "lucide-react";
+import { Mail, MessageSquareShare } from "lucide-react";
 import {
   Dialog,
   DialogTrigger,
@@ -101,30 +101,43 @@ export default function Connect() {
 
   return (
     <Dialog>
-      <motion.div
-        initial={{ width: 0, opacity: 0.2, scale: 0.3 }}
-        animate={{ width: 105, opacity: 1, scale: 1 }}
-        exit={{ width: 0, opacity: 0, scale: 1 }}
-        transition={{
-          type: "spring",
-          stiffness: 150,
-          damping: 18,
-          mass: 1,
-          ease: "anticipate",
-        }}
-        className="overflow-hidden"
-      >
+      <div className="overflow-hidden">
         <DialogTrigger asChild>
-          <Button
-            className="text-xs w-full cursor-pointer flex justify-start"
-            variant="secondary"
-            size="sm"
+          <motion.div
+            whileHover="hover"
+            
+            transition={{ type: "spring", stiffness: 400, damping: 10 }}
+            initial="initial"
+            className="w-full"
           >
-            <Mail />
-            Contact me
-          </Button>
+            <Button
+              className="text-sm w-full group rounded-full cursor-pointer flex items-center justify-center"
+              variant="secondary"
+              size="sm"
+            >
+              <motion.span
+                variants={{
+                  initial: { x: 0, width: "auto" },
+                  hover: { x: -4, width: "auto" },
+                }}
+                transition={{ type: "spring", stiffness: 300 }}
+              >
+                Contact me
+              </motion.span>
+              <motion.div
+                variants={{
+                  initial: { opacity: 0, x: 0, width: 0 },
+                  hover: { opacity: 1, x: 0, width: "auto" },
+                }}
+                transition={{ duration: 0.4, type: "spring", stiffness: 120 }}
+                className="overflow-hidden"
+              >
+                <MessageSquareShare  />
+              </motion.div>
+            </Button>
+          </motion.div>
         </DialogTrigger>
-      </motion.div>
+      </div>
 
       <DialogContent>
         <DialogHeader>

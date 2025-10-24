@@ -2,18 +2,12 @@
 
 import { motion } from "motion/react";
 import Image from "next/image";
-import { useEffect, useState } from "react";
 
 export default function ProfileImage() {
-  const [position, setPosition] = useState(0);
 
-  useEffect(() => {
-    const intervalId = setInterval(() => {
-      setPosition((prev) => (prev + 1) % 100);
-    }, 50);
 
-    return () => clearInterval(intervalId);
-  }, []);
+
+  
   return (
     <motion.div
       initial={{ opacity: 0, scale: 0.95, y: -10 }}
@@ -24,22 +18,16 @@ export default function ProfileImage() {
         stiffness: 120,
         damping: 14,
       }}
-      className="relative h-16 w-16 p-0.5 rounded-full overflow-hidden"
-      style={{
-        backgroundImage: `linear-gradient(${
-          position * 3.6
-        }deg, #E81CFF, #FF6A00, #40C9FF)`,
-        backgroundSize: "200% 200%",
-        animation: "moveGradient 3s easeOut infinite",
-      }}
+      className="relative h-16 w-16 overflow-hidden"
+      
     >
       <Image
         alt="profile"
-        src="/avatar2.jpg"
+        src="/avatar.jpg"
         priority
         width={256}
         height={256}
-        className="rounded-full object-fill "
+        className="rounded-full object-fill border-2 border-ring "
       ></Image>
     </motion.div>
   );

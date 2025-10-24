@@ -1,5 +1,6 @@
 "use client";
 
+import { Circle, CircleDot, CircleSmall } from "lucide-react";
 import Connect from "./connect";
 import ProfileImage from "./profileImage";
 import Social from "./social";
@@ -8,21 +9,25 @@ function Profile() {
   return (
     <header
       id="site-header"
-      className="flex mt-12 flex-col bg-card justify-between gap-2 p-6 rounded-3xl border border-border"
+      className="flex mt-0 flex-col justify-between gap-4"
     >
-      {/* <ProfileImage /> */}
+      <ProfileImage />
 
       <div className="w-full flex items-center flex-wrap gap-2 justify-between ">
         <h1 className="font-medium shrink-0 text-lg ">Ahmed Gaeedy</h1>
+        <CircleSmall
+          size={18}
+          className="mr-auto text-ring cursor-pointer hover:scale-110 active:scale-100"
+        />
         <Connect />
       </div>
 
-      <hr className="opacity-45 bg-ring" />
+      {/* <hr className="opacity-45 bg-ring" /> */}
 
       <div className="flex justify-between items-center flex-wrap gap-2 text-sm">
-        <p className="text-muted-foreground text-balance font-medium">
+        {/* <p className="text-muted-foreground text-balance font-medium">
           Front-End Developer
-        </p>
+        </p> */}
         <Social />
       </div>
     </header>

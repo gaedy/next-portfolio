@@ -50,7 +50,7 @@ const Project: React.FC<ProjectProps> = ({ project }) => {
   return (
     <article
       className="bg-card transition-colors duration-300
-                hover:bg-neutral-950  border
+                hover:bg-popover  border
                 border-border sm:h-32 h-fit
                   rounded-2xl flex flex-col p-4 group relative"
     >
@@ -79,8 +79,8 @@ const Project: React.FC<ProjectProps> = ({ project }) => {
             <Link
               href={githubLink}
               target={"_blank"}
-              className="opacity-80 group-hover:opacity-100  z-10 transition-all hover:scale-105 active:scale-100 duration-300 bg-popover group-hover:bg-neutral-900
-                                hover:bg-input text-xs w-fit h-full p-1 px-1.5 rounded-full flex justify-between items-center cursor-pointer gap-1.5 pointer-events-auto"
+              className="opacity-80 group-hover:opacity-100  z-10 transition-all hover:scale-105 active:scale-100 duration-300 border border-border bg-secondary 
+                                hover:bg-accent text-xs w-fit h-full p-1 px-1.5 rounded-full flex justify-between items-center cursor-pointer gap-1.5 pointer-events-auto"
             >
               <SiGithub size={14} />
               <p>Github</p>
@@ -94,7 +94,7 @@ const Project: React.FC<ProjectProps> = ({ project }) => {
           </div>
         </div>
       </div>
-      <hr className="opacity-45 bg-ring my-2.5" />
+      <hr className=" bg-border my-2.5" />
       <p className="text-sm text-muted-foreground">{description}</p>
     </article>
   );
