@@ -15,12 +15,11 @@ const Frontpage = () => {
       <Projects />
       <Tools />
       <section className="flex items-center gap-2">
-        <Link href="/blog" aria-label="Read my blog articles">
-          {" "}
-          <Button className="cursor-pointer" variant="secondary" size="default">
-            View Blogs
-            <ArrowRight size={16} aria-hidden="true" />
-          </Button>
+        <Link href="/writing" aria-label="Read my blog articles">
+          <div className="flex items-center gap-1.5 transition-colors duration-300 font-medium text-muted-foreground focus-within:text-foreground hover:text-foreground">
+            View Writings
+            <ArrowRight size={16} />
+          </div>
         </Link>
       </section>
     </div>

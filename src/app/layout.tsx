@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Outfit, Vazirmatn, Merriweather } from "next/font/google";
+import { Outfit, Vazirmatn, Merriweather, Nunito } from "next/font/google";
 import "./globals.css";
 import { Toaster } from "sonner";
 import { Analytics } from "@vercel/analytics/next";

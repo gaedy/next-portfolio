@@ -20,7 +20,7 @@ export default function Article({ post, isPreview = false }: ArticleProps) {
   });
 
   return (
-    <Link href={`/blog/${post.slug}`}>
+    <Link href={`/writing/${post.slug}`}>
       <article className="flex flex-col gap-2 rounded-md group">
         <header>
           <h1 className="group-hover:underline text-lg font-medium ">

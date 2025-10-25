@@ -1,6 +1,8 @@
 import { projects } from "@/components/Projects/projectsData";
 import Project from "@/components/Projects/project";
 
+import React from "react";
+
 function Projects() {
   return (
     <section

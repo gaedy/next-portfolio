@@ -143,7 +143,7 @@ export default function Connect() {
         </DialogTrigger>
       </div>
 
-      <DialogContent>
+      <DialogContent className="rounded-3xl">
         <DialogHeader>
           <DialogTitle>Send Me a Message</DialogTitle>
           <DialogDescription>

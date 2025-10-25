@@ -7,6 +7,7 @@
 :root {
   /* ===== Base ===== */
   --background: oklch(0.2119 0.0079 297.16);
+  --background-dark: oklch(17.9% 0.00613 285.724);
   --foreground: oklch(0.95 0.005 297.16);
 
   /* ===== Surfaces ===== */
@@ -67,6 +68,7 @@
   --font-vazirmatn: var(--font-vazirmatn);
   --font-merriweather: var(--font-merriweather);
 
+  
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
@@ -96,6 +98,8 @@
   --color-popover: var(--popover);
   --color-card-foreground: var(--card-foreground);
   --color-card: var(--card);
+
+  --color-background-dark: var(--background-dark);
 }
 
 body {

@@ -29,11 +29,11 @@ export default function BlogLayout({
       className="max-w-2xl px-4 mx-auto flex flex-col justify-center"
     >
       <div className="sticky bg-background top-0 text-sm w-full py-4  mt-4 h-fit flex items-center justify-between gap-2 z-10">
-        <Link href={pathname === "/blog" ? "/" : "/blog"}>
+        <Link href={pathname === "/writing" ? "/" : "/writing"}>
           <Button variant="secondary" className="cursor-pointer">
             <ArrowLeft size={16} />
 
-            {pathname === "/blog" ? "Back to Home" : "Back to Blogs"}
+            {pathname === "/writing" ? "Back to Home" : "Back to Writings"}
           </Button>
         </Link>
       </div>
