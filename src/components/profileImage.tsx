@@ -4,10 +4,6 @@ import { motion } from "motion/react";
 import Image from "next/image";
 
 export default function ProfileImage() {
-
-
-
-  
   return (
     <motion.div
       initial={{ opacity: 0, scale: 0.95, y: -10 }}
@@ -19,7 +15,6 @@ export default function ProfileImage() {
         damping: 14,
       }}
       className="relative h-16 w-16 overflow-hidden"
-      
     >
       <Image
         alt="profile"
