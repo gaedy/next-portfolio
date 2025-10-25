@@ -18,7 +18,7 @@ export default function BlogPage() {
         <h1 className="font-medium text-xl">Blogs</h1>
       </header>
 
-      <hr className="opacity-45 bg-ring" />
+      <hr className="bg-border" />
       {blogPosts.length === 0 ? (
         <p className="text-muted-foreground text-center">
           No blog posts found.

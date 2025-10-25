@@ -29,8 +29,8 @@ export default function Article({ post, isPreview = false }: ArticleProps) {
         </header>
 
         <div className="text-xs text-muted-foreground flex-wrap items-center flex gap-2">
-          <p>By {post.author}</p>
-          <span className="sm:flex hidden">&bull;</span>
+          {/* <p>By {post.author}</p>
+          <span className="sm:flex hidden">&bull;</span> */}
           <p>{currentDate}</p>
         </div>
       </article>

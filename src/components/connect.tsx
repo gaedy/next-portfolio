@@ -3,7 +3,7 @@
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { Mail, MessageSquareShare } from "lucide-react";
+import { Mail, MessageSquareShare, Send, SendHorizontal } from "lucide-react";
 import {
   Dialog,
   DialogTrigger,
@@ -105,20 +105,19 @@ export default function Connect() {
         <DialogTrigger asChild>
           <motion.div
             whileHover="hover"
-            
             transition={{ type: "spring", stiffness: 400, damping: 10 }}
             initial="initial"
             className="w-full"
           >
             <Button
-              className="text-sm w-full group rounded-full cursor-pointer flex items-center justify-center"
+              className="text-sm w-full group  transition-colors duration-300 hover:bg-ring rounded-full cursor-pointer flex items-center justify-center"
               variant="secondary"
               size="sm"
             >
               <motion.span
                 variants={{
                   initial: { x: 0, width: "auto" },
-                  hover: { x: -4, width: "auto" },
+                  hover: { x: -2, width: "auto" },
                 }}
                 transition={{ type: "spring", stiffness: 300 }}
               >
@@ -129,10 +128,15 @@ export default function Connect() {
                   initial: { opacity: 0, x: 0, width: 0 },
                   hover: { opacity: 1, x: 0, width: "auto" },
                 }}
-                transition={{ duration: 0.4, type: "spring", stiffness: 120 }}
-                className="overflow-hidden"
+                transition={{
+                  duration: 0.5,
+                  type: "spring",
+                  stiffness: 110,
+                  ease: "easeOut",
+                }}
+                className="overflow-hidden -ml-1 "
               >
-                <MessageSquareShare  />
+                <Mail />
               </motion.div>
             </Button>
           </motion.div>

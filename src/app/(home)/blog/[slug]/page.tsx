@@ -43,12 +43,12 @@ export default async function BlogPostPage({
       </header>
 
       <div className="text-sm font-outfit text-muted-foreground sm:flex-row flex-col items-start sm:items-center flex gap-2">
-        <p>By {post.author}</p>
-        <span className="sm:flex hidden">&bull;</span>
+        {/* <p>By {post.author}</p>
+        <span className="sm:flex hidden">&bull;</span> */}
         <p>Published on {currentDate}</p>
       </div>
 
-      <hr className="opacity-60 bg-ring " />
+      <hr className="bg-border " />
 
       <section className="prose-dark font-merriweather">
         <ReactMarkdown>{post.content}</ReactMarkdown>
