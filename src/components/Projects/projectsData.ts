@@ -4,7 +4,16 @@ export const projects = [
     description:
       "A platform for tracking reading progress, reviewing books, and write meaningful reviews.",
     githubLink: "https://github.com/gaedy/smart-chapters",
-    technologies: ["typescript", "nextjs", "tailwind", "prisma", "nextAuth"],
+    technologies: [
+      "typescript",
+      "nextjs",
+      "tailwind",
+      "postgresql",
+      "prisma",
+      "shadCn",
+      "lucide",
+      "nextAuth",
+    ],
     liveDemoLink: "https://smart-chapters.vercel.app/",
     isNew: true,
     pic: "/img1.webp",
@@ -14,7 +23,7 @@ export const projects = [
     description:
       "A responsive portfolio website that serves as a central hub for showcasing projects and skills and contact information.",
     githubLink: "https://github.com/gaedy/next-portfolio",
-    technologies: ["typescript", "nextjs", "tailwind", "shadcn"],
+    technologies: ["typescript", "nextjs", "tailwind", "shadCn", "lucide"],
     liveDemoLink: "https://gaeedy.space",
     isNew: false,
     pic: "/img2.webp",
@@ -24,7 +33,7 @@ export const projects = [
     description:
       "A property listing platform for renting, buying, and selling real estate.",
     githubLink: "https://github.com/gaedy/pooking",
-    technologies: ["javascript", "react", "tailwind", "redux"],
+    technologies: ["javascript", "react", "tailwind", "redux", "lucide"],
     liveDemoLink: "https://pooking.netlify.app/",
     isNew: false,
     pic: "/img3.webp",

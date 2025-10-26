@@ -8,6 +8,8 @@ import {
   SiJavascript,
   SiLucide,
   SiNextdotjs,
+  SiPostgresql,
+  SiPrisma,
   SiReact,
   SiRedux,
   SiShadcnui,
@@ -49,9 +51,11 @@ const Project: React.FC<ProjectProps> = ({ project }) => {
     react: SiReact,
     nextjs: SiNextdotjs,
     tailwind: SiTailwindcss,
-    shadcn: SiShadcnui,
+    shadCn: SiShadcnui,
     lucide: SiLucide,
     redux: SiRedux,
+    prisma: SiPrisma,
+    postgresql: SiPostgresql,
   };
 
   return (
@@ -60,7 +64,7 @@ const Project: React.FC<ProjectProps> = ({ project }) => {
                 hover:bg-popover border border-border
                   rounded-3xl flex flex-col gap-3 p-2 group relative"
     >
-      <div className="w-full relative rounded-2xl flex border border-border">
+      <div className="w-full relative  rounded-2xl flex border border-border">
         <Image
           src={pic}
           className=" h-40 group-hover:brightness-100 brightness-75 transition-all duration-300 object-cover rounded-[15px]"
