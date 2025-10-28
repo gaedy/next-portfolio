@@ -12,9 +12,9 @@ export default function ProfileImage() {
         duration: 0.4,
         type: "spring",
         stiffness: 120,
-        damping: 14,
+        damping: 12,
       }}
-      className="relative h-14  w-7 overflow-hidden"
+      className="relative h-14  w-7 pointer-events-none select-none overflow-hidden"
     >
       <Image
         alt="profile"

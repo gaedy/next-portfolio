@@ -68,7 +68,7 @@ export default function Social() {
           <Button
             variant="secondary"
             size="icon"
-            className=" h-8 w-8 rounded-full cursor-pointer
+            className=" h-8 w-8  rounded-full cursor-pointer
                     transition-colors duration-300 group hover:bg-ring"
           >
             <div className="scale-95 opacity-70 transition-opacity duration-300 group-hover:opacity-100 ">

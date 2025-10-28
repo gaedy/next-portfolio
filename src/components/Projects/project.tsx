@@ -1,6 +1,7 @@
 "use client";
 import { ArrowRight, ArrowUpRight, ExternalLink } from "lucide-react";
 import {
+  SiBehance,
   SiGit,
   SiGitHex,
   SiGithub,
@@ -61,13 +62,13 @@ const Project: React.FC<ProjectProps> = ({ project }) => {
   return (
     <article
       className="bg-card transition-colors duration-300
-                hover:bg-popover border border-border
+                hover:bg-popover border border-border 
                   rounded-3xl flex flex-col gap-3 p-3 group relative"
     >
-      <div className="w-full relative  rounded-2xl flex border border-border">
+      <div className="w-full relative  rounded-2xl flex border border-border overflow-hidden">
         <Image
           src={pic}
-          className=" h-40 group-hover:brightness-100 brightness-75 transition-all duration-300 object-cover rounded-[15px]"
+          className=" h-40 group-hover:brightness-100 brightness-75 transition-all duration-300 object-cover rounded-[15px] group-hover:scale-103"
           alt={title}
           width={800}
           height={200}
@@ -99,7 +100,7 @@ const Project: React.FC<ProjectProps> = ({ project }) => {
         <p className="text-sm text-muted-foreground">{description}</p>
       </div>
 
-      <div className="flex gap-2 h-fit   items-center">
+      <div className="flex gap-2 h-fit items-center">
         {githubLink && (
           <Link href={githubLink} target="_blank">
             <Button
@@ -114,11 +115,23 @@ const Project: React.FC<ProjectProps> = ({ project }) => {
           </Link>
         )}
 
+        {/* <Link href={liveDemoLink} target="_blank">
+          <Button
+            variant="secondary"
+            size="sm"
+            className="z-10   transition-all duration-300 bg-input
+              hover:bg-ring text-sm rounded-full flex justify-between items-center cursor-pointer"
+          >
+            <SiBehance />
+            <p>Behance</p>
+          </Button>
+        </Link> */}
+
         <Link href={liveDemoLink} target="_blank">
           <Button
             variant="secondary"
             size="sm"
-            className="z-10 transition-all duration-300 bg-input
+            className="z-10  transition-all duration-300 bg-input
               hover:bg-ring text-sm rounded-full flex justify-between items-center cursor-pointer"
           >
             <p>Live Demo</p>

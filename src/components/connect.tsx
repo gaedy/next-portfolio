@@ -105,12 +105,12 @@ export default function Connect() {
         <DialogTrigger asChild>
           <motion.div
             whileHover="hover"
-            transition={{ type: "spring", stiffness: 300, damping: 40}}
+            transition={{ type: "spring", stiffness: 300, damping: 40 }}
             initial="initial"
             className="w-full"
           >
             <Button
-              className="text-sm w-full group mr-2 transition-colors duration-300 hover:bg-ring rounded-full cursor-pointer flex items-center justify-center"
+              className="text-sm w-full  group mr-2 transition-colors duration-300 hover:bg-ring rounded-full cursor-pointer flex items-center justify-center"
               variant="secondary"
               size="sm"
             >
