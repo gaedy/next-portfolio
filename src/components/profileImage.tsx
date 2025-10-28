@@ -14,15 +14,15 @@ export default function ProfileImage() {
         stiffness: 120,
         damping: 14,
       }}
-      className="relative h-16 w-16 overflow-hidden"
+      className="relative h-14  w-7 overflow-hidden"
     >
       <Image
         alt="profile"
-        src="/avatar.jpg"
+        src="/thelogo.svg"
         priority
         width={256}
         height={256}
-        className="rounded-full object-fill border-2 border-ring "
+        className="  object-fill "
       ></Image>
     </motion.div>
   );

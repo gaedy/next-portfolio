@@ -105,21 +105,21 @@ export default function Connect() {
         <DialogTrigger asChild>
           <motion.div
             whileHover="hover"
-            transition={{ type: "spring", stiffness: 400, damping: 10 }}
+            transition={{ type: "spring", stiffness: 300, damping: 40}}
             initial="initial"
             className="w-full"
           >
             <Button
-              className="text-sm w-full group  transition-colors duration-300 hover:bg-ring rounded-full cursor-pointer flex items-center justify-center"
+              className="text-sm w-full group mr-2 transition-colors duration-300 hover:bg-ring rounded-full cursor-pointer flex items-center justify-center"
               variant="secondary"
               size="sm"
             >
               <motion.span
                 variants={{
                   initial: { x: 0, width: "auto" },
-                  hover: { x: -2, width: "auto" },
+                  hover: { x: -5, width: "auto" },
                 }}
-                transition={{ type: "spring", stiffness: 300 }}
+                transition={{ type: "spring", stiffness: 300, damping: 10 }}
               >
                 Contact me
               </motion.span>
@@ -131,7 +131,7 @@ export default function Connect() {
                 transition={{
                   duration: 0.5,
                   type: "spring",
-                  stiffness: 110,
+                  stiffness: 100,
                   ease: "easeOut",
                 }}
                 className="overflow-hidden -ml-1 "

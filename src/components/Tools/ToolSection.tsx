@@ -37,7 +37,7 @@ export function ToolSection({ title, tools }: ToolSectionProps) {
         {tools.map((tool, index) => (
           <li
             key={index}
-            className="flex text-sm rounded-md bg-secondary items-center gap-2 p-2"
+            className="flex text-sm rounded-md border border-border border-dashed items-center gap-2 p-2  "
           >
             <span className="w-4 h-4 [&>svg]:w-full [&>svg]:h-full">
               {tool.icon}

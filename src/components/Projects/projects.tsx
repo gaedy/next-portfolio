@@ -2,6 +2,8 @@ import { projects } from "@/components/Projects/projectsData";
 import Project from "@/components/Projects/project";
 
 import React from "react";
+import { ArrowRight } from "lucide-react";
+import Link from "next/link";
 
 function Projects() {
   return (
@@ -11,10 +13,13 @@ function Projects() {
     >
       <header className="flex justify-between items-center">
         <h2 className="font-medium">Latest Projects</h2>
-        {/* <Button className="text-xs" size="sm" variant="secondary">
-          View All
-          <ArrowRight />
-        </Button> */}
+
+        {/* <Link href="/projects">
+          <div className=" flex items-center transition-colors duration-200 gap-1.5 text-sm cursor-pointer hover:text-foreground text-muted-foreground">
+            View All
+            <ArrowRight size={16} />
+          </div>
+        </Link> */}
       </header>
 
       <ul className="flex flex-col gap-3">

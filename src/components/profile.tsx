@@ -1,6 +1,6 @@
 "use client";
 
-import { Circle, CircleDot, CircleSmall } from "lucide-react";
+import { CircleSmall } from "lucide-react";
 import Connect from "./connect";
 import ProfileImage from "./profileImage";
 import Social from "./social";

@@ -62,7 +62,7 @@ const Project: React.FC<ProjectProps> = ({ project }) => {
     <article
       className="bg-card transition-colors duration-300
                 hover:bg-popover border border-border
-                  rounded-3xl flex flex-col gap-3 p-2 group relative"
+                  rounded-3xl flex flex-col gap-3 p-3 group relative"
     >
       <div className="w-full relative  rounded-2xl flex border border-border">
         <Image
@@ -83,7 +83,7 @@ const Project: React.FC<ProjectProps> = ({ project }) => {
         </div>
       </div>
 
-      <div className="flex flex-col px-2 gap-1 mb-1">
+      <div className="flex flex-col px-1 gap-1 mb-1">
         {" "}
         <div className="flex flex-col justify-between gap-2 w-full">
           <header>
@@ -99,7 +99,7 @@ const Project: React.FC<ProjectProps> = ({ project }) => {
         <p className="text-sm text-muted-foreground">{description}</p>
       </div>
 
-      <div className="flex gap-2 h-fit p-1  items-center">
+      <div className="flex gap-2 h-fit   items-center">
         {githubLink && (
           <Link href={githubLink} target="_blank">
             <Button
