@@ -16,7 +16,7 @@ export const projects = [
     ],
     liveDemoLink: "https://smart-chapters.vercel.app/",
     isNew: true,
-    pic: "/img1.webp",
+    pic: "/cover2.png",
   },
   {
     title: "Personal Portfolio - Showcasing My Work & Skills",
@@ -26,7 +26,7 @@ export const projects = [
     technologies: ["typescript", "nextjs", "tailwind", "shadCn", "lucide"],
     liveDemoLink: "https://gaeedy.space",
     isNew: false,
-    pic: "/img2.webp",
+    pic: "/cover3.jpg",
   },
   {
     title: "Pooking - Travel Agencies",
@@ -36,7 +36,7 @@ export const projects = [
     technologies: ["javascript", "react", "tailwind", "redux", "lucide"],
     liveDemoLink: "https://pooking.netlify.app/",
     isNew: false,
-    pic: "/img3.webp",
+    pic: "/cover1.png",
   },
   {
     title: "ChatGPT Clone - AI Chatbot",
