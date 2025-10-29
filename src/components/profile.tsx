@@ -1,6 +1,5 @@
 "use client";
-
-import { CircleSmall } from "lucide-react";
+import { CircleSmall, Equal, EqualApproximately } from "lucide-react";
 import Connect from "./connect";
 import ProfileImage from "./profileImage";
 import Social from "./social";
@@ -17,8 +16,16 @@ function Profile() {
         <h1 className="font-medium shrink-0 text-lg ">Ahmed Gaeedy</h1>
         <CircleSmall
           size={18}
-          className="mr-auto text-ring cursor-pointer hover:scale-110 active:scale-100"
+          className=" mr-auto text-ring cursor-pointer hover:scale-110 active:scale-100"
         />
+        {/* <button
+          type="button"
+          aria-label="Toggle site font"
+          className="mr-auto text-ring cursor-pointer hover:scale-110 active:scale-100 transition-transform"
+        >
+          <Equal size={18} />
+          <EqualApproximately size={18} />
+        </button> */}
         <Connect />
       </div>
 

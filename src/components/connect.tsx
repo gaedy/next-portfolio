@@ -3,7 +3,7 @@
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { Mail, MessageSquareShare, Send, SendHorizontal } from "lucide-react";
+import { Mail } from "lucide-react";
 import {
   Dialog,
   DialogTrigger,
@@ -19,7 +19,7 @@ import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { toast } from "sonner";
-import { AnimatePresence, motion } from "motion/react";
+import { motion } from "motion/react";
 
 export const contactSchema = z.object({
   name: z
@@ -116,23 +116,24 @@ export default function Connect() {
             >
               <motion.span
                 variants={{
-                  initial: { x: 0, width: "auto" },
-                  hover: { x: -5, width: "auto" },
+                  initial: { x: 0 },
+                  hover: { x: -5 },
                 }}
-                transition={{ type: "spring", stiffness: 300, damping: 10 }}
+                transition={{ type: "spring", stiffness: 180, damping: 8 }}
               >
                 Contact me
               </motion.span>
               <motion.div
                 variants={{
                   initial: { opacity: 0, x: 0, width: 0 },
+
                   hover: { opacity: 1, x: 0, width: "auto" },
                 }}
                 transition={{
-                  duration: 0.5,
+                  duration: 0.2,
                   type: "spring",
-                  stiffness: 100,
-                  ease: "easeOut",
+                  stiffness: 150,
+                  damping: 14,
                 }}
                 className="overflow-hidden -ml-1 "
               >
