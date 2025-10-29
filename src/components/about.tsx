@@ -1,4 +1,3 @@
-import { NotepadText } from "lucide-react";
 
 function About() {
   return (

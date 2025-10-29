@@ -2,8 +2,6 @@ import { projects } from "@/components/Projects/projectsData";
 import Project from "@/components/Projects/project";
 
 import React from "react";
-import { ArrowRight } from "lucide-react";
-import Link from "next/link";
 
 function Projects() {
   return (

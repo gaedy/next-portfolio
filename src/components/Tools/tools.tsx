@@ -7,6 +7,7 @@ import {
 import React from "react";
 import { ToolSection } from "./ToolSection";
 import {
+  SiBetterauth,
   SiBlender,
   SiCss,
   SiFigma,
@@ -21,6 +22,7 @@ import {
   SiShadcnui,
   SiTailwindcss,
   SiTypescript,
+  SiZod,
 } from "@icons-pack/react-simple-icons";
 
 interface ToolItem {
@@ -42,6 +44,8 @@ const Tools: React.FC = () => {
     { icon: <SiLucide />, name: "Lucide icons" },
     { icon: <SiPrisma />, name: "Prisma" },
     { icon: <SiPostgresql />, name: "Postgresql" },
+    { icon: <SiBetterauth />, name: "Better Auth" },
+    { icon: <SiZod />, name: "Zod" },
   ];
   const myUiTools: ToolItem[] = [
     { icon: <SiBlender />, name: "Blender" },
