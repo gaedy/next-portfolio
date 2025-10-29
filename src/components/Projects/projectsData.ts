@@ -46,6 +46,6 @@ export const projects = [
     technologies: ["javascript", "react", "tailwind", "redux"],
     liveDemoLink: "https://chat-gpt-clone-umber.vercel.app/",
     isNew: false,
-    pic: "/img1.webp",
+    pic: "/cover4.jpg",
   },
 ];
