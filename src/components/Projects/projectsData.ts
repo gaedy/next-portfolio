@@ -36,7 +36,7 @@ export const projects = [
     technologies: ["javascript", "react", "tailwind", "redux", "lucide"],
     liveDemoLink: "https://pooking.netlify.app/",
     isNew: false,
-    pic: "/cover1.png",
+    pic: "/cover5.webp",
   },
   {
     title: "ChatGPT Clone - AI Chatbot",
