@@ -16,7 +16,7 @@ export const projects = [
     ],
     liveDemoLink: "https://smart-chapters.vercel.app/",
     isNew: true,
-    pic: "/cover2.png",
+    pic: "/cover2.webp",
   },
   {
     title: "Personal Portfolio - Showcasing My Work & Skills",
@@ -46,6 +46,6 @@ export const projects = [
     technologies: ["javascript", "react", "tailwind", "redux"],
     liveDemoLink: "https://chat-gpt-clone-umber.vercel.app/",
     isNew: false,
-    pic: "/cover4.jpg",
+    pic: "/cover4.webp",
   },
 ];

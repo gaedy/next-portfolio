@@ -14,7 +14,7 @@ export default function ProfileImage() {
         stiffness: 120,
         damping: 12,
       }}
-      className="relative h-14  w-7 pointer-events-none select-none overflow-hidden"
+      className="relative h-11  w-7 pointer-events-none select-none overflow-hidden"
     >
       <Image
         alt="profile"
