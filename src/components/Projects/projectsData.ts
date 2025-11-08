@@ -26,7 +26,7 @@ export const projects = [
     technologies: ["typescript", "nextjs", "tailwind", "shadCn", "lucide"],
     liveDemoLink: "https://gaeedy.space",
     isNew: false,
-    pic: "/cover3.jpg",
+    pic: "/cover3.webp",
   },
   {
     title: "Pooking - Travel Agencies",
