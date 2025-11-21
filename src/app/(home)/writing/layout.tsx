@@ -33,7 +33,7 @@ export default function BlogLayout({
           <Button variant="secondary" className="cursor-pointer">
             <ArrowLeft size={16} />
 
-            {pathname === "/writing" ? "Back to Home" : "Back to Writings"}
+            {/* {pathname === "/writing" ? "Back to Home" : "Back to Writings"} */}
           </Button>
         </Link>
       </div>

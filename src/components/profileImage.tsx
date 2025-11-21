@@ -14,11 +14,11 @@ export default function ProfileImage() {
         stiffness: 120,
         damping: 12,
       }}
-      className="relative h-11  w-7 pointer-events-none select-none overflow-hidden"
+      className="relative h-9  w-8 pointer-events-none select-none overflow-hidden"
     >
       <Image
         alt="profile"
-        src="/thelogo.svg"
+        src="/thelogo2.svg"
         priority
         width={256}
         height={256}

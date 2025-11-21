@@ -5,13 +5,14 @@ import Projects from "@/components/Projects/projects";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import Tools from "./Tools/tools";
-import { Button } from "./ui/button";
+import Services from "./Services/services";
 
 const Frontpage = () => {
   return (
     <div className="flex flex-col gap-8">
       <Profile />
       <About />
+      <Services/>
       <Projects />
       <Tools />
       <section className="flex items-center gap-2">

@@ -1,4 +1,3 @@
-
 function About() {
   return (
     <section id="about" className="flex flex-col gap-2">

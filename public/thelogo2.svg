@@ -1,1 +1,17 @@
-<?xml version="1.0" encoding="UTF-8"?><svg id="Layer_2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 189.89 331.1"><g id="small01_fush"><rect x="142.42" y="190.18" width="47.47" height="47.47" style="fill:#8661cc;"/><rect y="237.35" width="47.47" height="47.47" style="fill:#8661cc;"/><rect x="47.47" y="283.63" width="94.95" height="47.47" style="fill:#8661cc;"/><rect x="142.42" y="0" width="47.47" height="47.47" style="fill:#8661cc;"/><rect x="47.47" y="47.47" width="47.47" height="47.47" style="fill:#8661cc;"/><rect x="94.94" y="94.94" width="47.48" height="94.94" style="fill:#8661cc;"/><rect y="94.94" width="47.47" height="94.94" style="fill:#8661cc;"/><rect x="47.47" y="189.88" width="47.47" height="47.47" style="fill:#8661cc;"/></g></svg>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240.2 270.22">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #a084e8;
+      }
+    </style>
+  </defs>
+  <g id="new">
+    <g>
+      <path class="cls-1" d="M240.2,180.15v14.71c0,41.63-33.74,75.36-75.36,75.36H60.05v-60.05h104.84c8.43,0,15.26-6.83,15.26-15.26v-14.76h60.05Z"/>
+      <path class="cls-1" d="M180.15,120.1v60.05H75.36C33.74,180.15,0,146.41,0,104.79V60.05H60.05v44.79c0,8.43,6.83,15.26,15.26,15.26h104.84Z"/>
+      <path class="cls-1" d="M240.2,75.36v44.74h-60.05v-44.79c0-8.43-6.83-15.26-15.26-15.26H60.05V0h104.79c41.62,0,75.36,33.74,75.36,75.36Z"/>
+    </g>
+  </g>
+</svg>
