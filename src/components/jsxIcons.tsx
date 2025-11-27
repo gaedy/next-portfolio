@@ -1,4 +1,7 @@
 import type { SVGProps } from "react";
+type IconProps = {
+  size?: number;
+};
 
 export function Linkedin(props: SVGProps<SVGSVGElement>) {
   return (
@@ -123,12 +126,13 @@ export function SimpleIconsBlender() {
   );
 }
 
-export function MageIllustrator() {
+export function MageIllustrator({ size = 24 }: IconProps) {
   return (
-    <svg
+    <svg className="scale-110"
       xmlns="http://www.w3.org/2000/svg"
-      width={24}
-      height={24}
+      width={size}
+      height={size}
+      
       viewBox="0 0 24 24"
     >
       <path
@@ -363,4 +367,3 @@ export function Cinema4d2() {
     </svg>
   );
 }
-
