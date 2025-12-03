@@ -40,10 +40,10 @@
   /* ===== UI Elements ===== */
   --border: oklch(0.9 0.02 297.16 / 10%);
   --input: oklch(31.216% 0.00896 294.963);
-  --ring: oklch(0.58 0.16 297.16);
+  --ring: oklch(0.479 0.152 292.26);
 
   /* ===== Charts ===== */
-  --chart-1: oklch(43.781% 0.11932 298.155);
+  --chart-1: oklch(0.628 0.1407 294.61);
   --chart-2: oklch(0.67 0.17 162.48);
   --chart-3: oklch(0.77 0.18 70.08);
   --chart-4: oklch(38.286% 0.05794 167.828);
@@ -68,7 +68,6 @@
   --font-vazirmatn: var(--font-vazirmatn);
   --font-merriweather: var(--font-merriweather);
 
-  
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);

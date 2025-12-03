@@ -16,7 +16,7 @@ function Profile() {
         <h1 className="font-medium shrink-0 text-lg ">Ahmed Gaeedy</h1>
         <CircleSmall
           size={18}
-          className=" mr-auto text-ring cursor-pointer hover:scale-110 active:scale-100"
+          className=" mr-auto text-chart-1 cursor-pointer hover:scale-110 active:scale-100"
         />
         {/* <button
           type="button"

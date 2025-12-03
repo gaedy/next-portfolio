@@ -18,7 +18,7 @@ export default function ProfileImage() {
     >
       <Image
         alt="profile"
-        src="/thelogo2.svg"
+        src="/thelogo3.svg"
         priority
         width={256}
         height={256}
