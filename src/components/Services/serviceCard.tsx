@@ -1,11 +1,17 @@
+"use client";
+
 import { CheckCircle2 } from "lucide-react";
-import Link from "next/link";
+import { useState } from "react";
 import { type ServiceItem } from "./servicesData";
 import { Button } from "../ui/button";
+import { Dialog, DialogTrigger } from "@/components/ui/dialog";
+import { ConnectDialog } from "@/components/connectDialog";
 
 import { motion } from "motion/react";
 
 export function ServiceCard({ service }: { service: ServiceItem }) {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <div
       className={`group flex flex-col justify-between gap-2 overflow-hidden hover:scale-101
@@ -67,22 +73,34 @@ export function ServiceCard({ service }: { service: ServiceItem }) {
           <span />
         )}
 
-        <Link href={service.buttonHref}>
+        {service.isPending !== true ? (
+          <Dialog open={isOpen} onOpenChange={setIsOpen}>
+            <DialogTrigger asChild>
+              <Button
+                variant="secondary"
+                size="sm"
+                className="z-10 transition-all duration-300 bg-input
+                            hover:bg-ring text-sm   rounded-full flex justify-between items-center cursor-pointer"
+              >
+                <p>{service.buttonText}</p>
+              </Button>
+            </DialogTrigger>
+            <ConnectDialog
+              serviceTitle={service.title}
+              onSuccess={() => setIsOpen(false)}
+            />
+          </Dialog>
+        ) : (
           <Button
             variant="secondary"
             size="sm"
             className="z-10 transition-all duration-300 bg-input
                         hover:bg-ring text-sm   rounded-full flex justify-between items-center cursor-pointer"
+            disabled
           >
-            {service.isPending === true ? (
-              <p>Coming Soon</p>
-            ) : (
-              <>
-                <p>{service.buttonText}</p>
-              </>
-            )}
+            <p>Coming Soon</p>
           </Button>
-        </Link>
+        )}
       </div>
     </div>
   );
