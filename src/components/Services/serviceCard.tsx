@@ -1,22 +1,9 @@
-import {
-  Check,
-  CheckCircle,
-  CheckCircle2,
-  Mail,
-  MessageCircleMore,
-  Send,
-} from "lucide-react";
-import Image from "next/image";
+import { CheckCircle2 } from "lucide-react";
 import Link from "next/link";
-import { services, type ServiceItem } from "./servicesData";
+import { type ServiceItem } from "./servicesData";
 import { Button } from "../ui/button";
-import Social from "../social";
-import {
-  SiAutodeskmaya,
-  SiFigma,
-  SiNextdotjs,
-  SiReact,
-} from "@icons-pack/react-simple-icons";
+
+import { motion } from "motion/react";
 
 export function ServiceCard({ service }: { service: ServiceItem }) {
   return (
@@ -39,7 +26,18 @@ export function ServiceCard({ service }: { service: ServiceItem }) {
 
       {/* Content Container */}
 
-      <div className=" flex flex-col h-full justify-between transition-all duration-300 bg-popover group-hover:bg-input hover:shadow-xl rounded-2xl border p-3 gap-2 ">
+      <motion.div
+        className=" flex flex-col h-full justify-between transition-colors duration-300 bg-popover group-hover:bg-input group-hover:shadow-xl rounded-2xl border p-3 gap-2 "
+        initial={{ opacity: 0, y: 4 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.6 }}
+        transition={{
+          type: "spring",
+          stiffness: 120,
+          damping: 14,
+          duration: 0.6,
+        }}
+      >
         {/* Title */}
         <h3 className="font-medium">{service.title}</h3>
 
@@ -52,20 +50,7 @@ export function ServiceCard({ service }: { service: ServiceItem }) {
             <Icon key={index} size={18} />
           ))}
         </div>
-      </div>
-
-      {/* <div className="flex  flex-col">
-        <div className="text-sm p-1 flex items-center gap-2">
-          <CheckCircle2 size={16} /> Custom layout tailored to your brand.
-        </div>
-
-        <div className="text-sm p-1 flex items-center gap-2">
-          <CheckCircle2 size={16} /> Custom layout tailored to your brand.
-        </div>
-        <div className="text-sm p-1 flex items-center gap-2">
-          <CheckCircle2 size={16} /> Custom layout tailored to your brand.
-        </div>
-      </div> */}
+      </motion.div>
 
       <div className="flex flex-col">
         {service.features.map((feature, index) => (

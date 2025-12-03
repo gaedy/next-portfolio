@@ -7,11 +7,7 @@ import {
   SiPrisma,
   SiTailwindcss,
 } from "@icons-pack/react-simple-icons";
-import {
-  Cinema4d,
-  DeviconPlainMaya,
-  MageIllustrator,
-} from "@/components/jsxIcons";
+import { MageIllustrator } from "@/components/jsxIcons";
 
 export interface ServiceItem {
   id: string;
@@ -28,24 +24,7 @@ export interface ServiceItem {
 
 export const services: ServiceItem[] = [
   {
-    id: "figma-design-ui",
-    title: "Landing Page Design in Figma",
-    description:
-      "Clean, modern, and conversion-focused landing page designed in Figma.",
-    features: [
-      "Custom layout tailored to your brand.",
-      "Pixel-perfect developer-ready design.",
-      "Optimized user flow for conversions.",
-    ],
-    price: "$200",
-    buttonText: "Get in touch",
-    buttonHref: "#contact",
-    image: "/laptop-with-plants-modern-design.jpg",
-    isPending: false,
-    icons: [SiFigma, MageIllustrator],
-  },
-  {
-    id: "react-next-dev",
+    id: "1",
     title: "Frontend Web Development",
     description:
       "High-performance frontend built with React and Next.js from your Figma design.",
@@ -62,7 +41,25 @@ export const services: ServiceItem[] = [
     icons: [SiReact, SiNextdotjs, SiTailwindcss],
   },
   {
-    id: "full-web-design",
+    id: "2",
+    title: "Landing Page Design in Figma",
+    description:
+      "Clean, modern, and conversion-focused landing page designed in Figma.",
+    features: [
+      "Custom layout tailored to your brand.",
+      "Pixel-perfect developer-ready design.",
+      "Optimized user flow for conversions.",
+    ],
+    price: "$200",
+    buttonText: "Get in touch",
+    buttonHref: "#contact",
+    image: "/laptop-with-plants-modern-design.jpg",
+    isPending: false,
+    icons: [SiFigma, MageIllustrator],
+  },
+
+  {
+    id: "3",
     title: "Full Website Design in Figma",
     description:
       "Complete multi-page website design with a clean and consistent UI system.",
@@ -79,7 +76,7 @@ export const services: ServiceItem[] = [
     icons: [SiFigma, MageIllustrator],
   },
   {
-    id: "fullstack-web-development",
+    id: "4",
     title: "Full Stack Web Development",
     description:
       "End-to-end development for fast, scalable, and production-ready web apps.",
