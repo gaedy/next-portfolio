@@ -1,6 +1,7 @@
 "use client";
 import { ArrowUpRight } from "lucide-react";
 import {
+  SiBehance,
   SiGithub,
   SiJavascript,
   SiLucide,
@@ -24,10 +25,12 @@ interface ProjectProps {
     title: string;
     description: string;
     githubLink?: string;
+    behanceLink?: string;
     liveDemoLink: string;
     isNew?: boolean;
     technologies?: string[];
     customIcon?: React.ElementType;
+    isBehance?: boolean;
     pic: string;
   };
 }
@@ -37,9 +40,12 @@ const Project: React.FC<ProjectProps> = ({ project }) => {
     title,
     description,
     githubLink,
+    behanceLink = "https://www.behance.net/",
     liveDemoLink,
     isNew,
     pic,
+    isBehance,
+
     technologies = [],
   } = project;
 
@@ -118,17 +124,19 @@ const Project: React.FC<ProjectProps> = ({ project }) => {
           </Link>
         )}
 
-        {/* <Link href={liveDemoLink} target="_blank">
-          <Button
-            variant="secondary"
-            size="sm"
-            className="z-10   transition-all duration-300 bg-input
+        {isBehance && (
+          <Link href={behanceLink} target="_blank">
+            <Button
+              variant="secondary"
+              size="sm"
+              className="z-10   transition-all duration-300 bg-input
               hover:bg-ring text-sm rounded-full flex justify-between items-center cursor-pointer"
-          >
-            <SiBehance />
-            <p>Behance</p>
-          </Button>
-        </Link> */}
+            >
+              <SiBehance />
+              <p>Behance</p>
+            </Button>
+          </Link>
+        )}
 
         <Link href={liveDemoLink} target="_blank">
           <Button

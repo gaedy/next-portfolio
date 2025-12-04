@@ -4,6 +4,7 @@ export const projects = [
     description:
       "A platform for tracking reading progress, reviewing books, and write meaningful reviews.",
     githubLink: "https://github.com/gaedy/smart-chapters",
+
     technologies: [
       "typescript",
       "nextjs",
@@ -16,6 +17,7 @@ export const projects = [
     ],
     liveDemoLink: "https://smart-chapters.vercel.app/",
     isNew: true,
+    isBehance: false,
     pic: "/cover2.webp",
   },
   {
@@ -23,9 +25,12 @@ export const projects = [
     description:
       "A responsive portfolio website that serves as a central hub for showcasing projects and skills and contact information.",
     githubLink: "https://github.com/gaedy/next-portfolio",
+    behanceLink: "https://www.behance.net/portfolio",
+
     technologies: ["typescript", "nextjs", "tailwind", "shadCn", "lucide"],
     liveDemoLink: "https://gaeedy.space",
     isNew: false,
+    isBehance: false,
     pic: "/cover3.webp",
   },
   {
@@ -36,6 +41,7 @@ export const projects = [
     technologies: ["javascript", "react", "tailwind", "redux", "lucide"],
     liveDemoLink: "https://pooking.netlify.app/",
     isNew: false,
+    isBehance: false,
     pic: "/cover5.webp",
   },
   {
@@ -46,6 +52,7 @@ export const projects = [
     technologies: ["javascript", "react", "tailwind", "redux"],
     liveDemoLink: "https://chat-gpt-clone-umber.vercel.app/",
     isNew: false,
+    isBehance: false,
     pic: "/cover4.webp",
   },
 ];
