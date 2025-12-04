@@ -80,7 +80,7 @@ const Project: React.FC<ProjectProps> = ({ project }) => {
           alt={title}
           width={800}
           height={400}
-          quality={90}
+          // quality={90}
         ></Image>{" "}
         <div className="absolute inset-0 rounded-[15px] bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
         <div className="absolute bottom-3 right-3 flex gap-2">
