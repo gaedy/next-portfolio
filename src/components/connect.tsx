@@ -1,5 +1,4 @@
 "use client";
-
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -14,6 +13,18 @@ import {
   DialogFooter,
   DialogClose,
 } from "@/components/ui/dialog";
+
+import {
+  Drawer,
+  DrawerClose,
+  DrawerContent,
+  DrawerDescription,
+  DrawerFooter,
+  DrawerHeader,
+  DrawerTitle,
+  DrawerTrigger,
+} from "@/components/ui/drawer";
+
 import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
@@ -100,119 +111,222 @@ export default function Connect() {
   };
 
   return (
-    <Dialog>
-      <div className="overflow-hidden">
-        <DialogTrigger asChild>
-          <motion.div
-            whileHover="hover"
-            transition={{ type: "spring", stiffness: 300, damping: 40 }}
-            initial="initial"
-            className="w-full"
-          >
+    <>
+      <div className="hidden sm:flex">
+        <Dialog>
+          <div className="overflow-hidden">
+            <DialogTrigger asChild>
+              <motion.div
+                whileHover="hover"
+                transition={{ type: "spring", stiffness: 300, damping: 40 }}
+                initial="initial"
+                className="w-full"
+              >
+                <Button
+                  className="text-sm w-full  group mr-2 transition-colors duration-300 hover:bg-ring rounded-full cursor-pointer flex items-center justify-center"
+                  variant="secondary"
+                  size="sm"
+                >
+                  <motion.span
+                    variants={{
+                      initial: { x: 0 },
+                      hover: { x: -5 },
+                    }}
+                    transition={{
+                      type: "spring",
+                      stiffness: 180,
+                      damping: 8,
+                    }}
+                  >
+                    Contact me
+                  </motion.span>
+                  <motion.div
+                    variants={{
+                      initial: { opacity: 0, x: 0, width: 0 },
+
+                      hover: { opacity: 1, x: 0, width: "auto" },
+                    }}
+                    transition={{
+                      duration: 0.2,
+                      type: "spring",
+                      stiffness: 150,
+                      damping: 14,
+                    }}
+                    className="overflow-hidden -ml-1 "
+                  >
+                    <Mail />
+                  </motion.div>
+                </Button>
+              </motion.div>
+            </DialogTrigger>
+          </div>
+
+          <DialogContent className="rounded-3xl ">
+            <DialogHeader>
+              <DialogTitle>Send Me a Message</DialogTitle>
+              <DialogDescription>
+                Feel free to reach out! Fill in the form below and I&apos;ll get
+                back to you as soon as possible.
+              </DialogDescription>
+            </DialogHeader>
+
+            <form
+              className="flex-col flex gap-4"
+              onSubmit={handleSubmit(onSubmit)}
+              noValidate
+            >
+              <div className="flex flex-col gap-2 ">
+                <Label htmlFor="name">Name (optional)</Label>
+                <Input
+                  id="name"
+                  placeholder="e.g. Mohamed Salah"
+                  {...register("name")}
+                  aria-invalid={!!errors.name || undefined}
+                />
+                {errors.name && (
+                  <p className="text-sm text-destructive ">
+                    {errors.name.message}
+                  </p>
+                )}
+              </div>
+
+              <div className="flex flex-col gap-2">
+                <Label htmlFor="email">Email</Label>
+                <Input
+                  id="email"
+                  type="email"
+                  placeholder="you@example.com"
+                  {...register("email")}
+                  aria-invalid={!!errors.email || undefined}
+                />
+                {errors.email && (
+                  <p className="text-sm text-destructive">
+                    {errors.email.message}
+                  </p>
+                )}
+              </div>
+
+              <div className="flex flex-col gap-2">
+                <Label htmlFor="message">Message</Label>
+                <Textarea
+                  id="message"
+                  placeholder="Type your message..."
+                  className="min-h-[100px]"
+                  {...register("message")}
+                  aria-invalid={!!errors.message || undefined}
+                />
+                {errors.message && (
+                  <p className="text-sm text-destructive">
+                    {errors.message.message}
+                  </p>
+                )}
+              </div>
+
+              <DialogFooter className="flex justify-end gap-2">
+                <DialogClose asChild>
+                  <Button type="button" variant="outline">
+                    Cancel
+                  </Button>
+                </DialogClose>
+                <Button type="submit" disabled={isSubmitting || !isValid}>
+                  {isSubmitting ? "Sending..." : "Send"}
+                </Button>
+              </DialogFooter>
+            </form>
+          </DialogContent>
+        </Dialog>
+      </div>
+
+      <div className="sm:hidden flex">
+        <Drawer>
+          <DrawerTrigger asChild>
             <Button
               className="text-sm w-full  group mr-2 transition-colors duration-300 hover:bg-ring rounded-full cursor-pointer flex items-center justify-center"
               variant="secondary"
               size="sm"
             >
-              <motion.span
-                variants={{
-                  initial: { x: 0 },
-                  hover: { x: -5 },
-                }}
-                transition={{ type: "spring", stiffness: 180, damping: 8 }}
-              >
-                Contact me
-              </motion.span>
-              <motion.div
-                variants={{
-                  initial: { opacity: 0, x: 0, width: 0 },
-
-                  hover: { opacity: 1, x: 0, width: "auto" },
-                }}
-                transition={{
-                  duration: 0.2,
-                  type: "spring",
-                  stiffness: 150,
-                  damping: 14,
-                }}
-                className="overflow-hidden -ml-1 "
-              >
-                <Mail />
-              </motion.div>
+              <span>Contact me</span>
             </Button>
-          </motion.div>
-        </DialogTrigger>
+          </DrawerTrigger>
+
+          <DrawerContent className="pb-safe">
+            <DrawerHeader className="text-left">
+              <DrawerTitle>Send Me a Message</DrawerTitle>
+              <DrawerDescription>
+                Feel free to reach out! Fill in the form below and I&apos;ll get
+                back to you as soon as possible.
+              </DrawerDescription>
+            </DrawerHeader>
+
+            <div className=" p-4 ">
+              <form
+                className="flex-col flex gap-4"
+                onSubmit={handleSubmit(onSubmit)}
+                noValidate
+              >
+                <div className="flex flex-col gap-2 ">
+                  <Label htmlFor="name">Name (optional)</Label>
+                  <Input
+                    className="text-sm"
+                    id="name"
+                    placeholder="e.g. Mohamed Salah"
+                    {...register("name")}
+                    aria-invalid={!!errors.name || undefined}
+                  />
+                  {errors.name && (
+                    <p className="text-sm text-destructive ">
+                      {errors.name.message}
+                    </p>
+                  )}
+                </div>
+
+                <div className="flex flex-col gap-2">
+                  <Label htmlFor="email">Email</Label>
+                  <Input
+                    className="text-sm"
+                    id="email"
+                    type="email"
+                    placeholder="you@example.com"
+                    {...register("email")}
+                    aria-invalid={!!errors.email || undefined}
+                  />
+                  {errors.email && (
+                    <p className="text-sm text-destructive">
+                      {errors.email.message}
+                    </p>
+                  )}
+                </div>
+
+                <div className="flex flex-col gap-2">
+                  <Label htmlFor="message">Message</Label>
+                  <Textarea
+                    id="message"
+                    placeholder="Type your message..."
+                    className="min-h-[100px] text-sm"
+                    {...register("message")}
+                    aria-invalid={!!errors.message || undefined}
+                  />
+                  {errors.message && (
+                    <p className="text-sm text-destructive">
+                      {errors.message.message}
+                    </p>
+                  )}
+                </div>
+
+                <DrawerFooter className="pt-2 p-0 shrink-0">
+                  <Button type="submit" disabled={isSubmitting || !isValid}>
+                    {isSubmitting ? "Sending..." : "Send"}
+                  </Button>
+
+                  <DrawerClose asChild>
+                    <Button variant="outline">Cancel</Button>
+                  </DrawerClose>
+                </DrawerFooter>
+              </form>
+            </div>
+          </DrawerContent>
+        </Drawer>
       </div>
-
-      <DialogContent className="rounded-3xl">
-        <DialogHeader>
-          <DialogTitle>Send Me a Message</DialogTitle>
-          <DialogDescription>
-            Feel free to reach out! Fill in the form below and I&apos;ll get
-            back to you as soon as possible.
-          </DialogDescription>
-        </DialogHeader>
-
-        <form
-          className="flex-col flex gap-4"
-          onSubmit={handleSubmit(onSubmit)}
-          noValidate
-        >
-          <div className="flex flex-col gap-2">
-            <Label htmlFor="name">Name (optional)</Label>
-            <Input
-              id="name"
-              placeholder="e.g. Mohamed Salah"
-              {...register("name")}
-              aria-invalid={!!errors.name || undefined}
-            />
-            {errors.name && (
-              <p className="text-sm text-destructive ">{errors.name.message}</p>
-            )}
-          </div>
-
-          <div className="flex flex-col gap-2">
-            <Label htmlFor="email">Email</Label>
-            <Input
-              id="email"
-              type="email"
-              placeholder="you@example.com"
-              {...register("email")}
-              aria-invalid={!!errors.email || undefined}
-            />
-            {errors.email && (
-              <p className="text-sm text-destructive">{errors.email.message}</p>
-            )}
-          </div>
-
-          <div className="flex flex-col gap-2">
-            <Label htmlFor="message">Message</Label>
-            <Textarea
-              id="message"
-              placeholder="Type your message..."
-              className="min-h-[100px]"
-              {...register("message")}
-              aria-invalid={!!errors.message || undefined}
-            />
-            {errors.message && (
-              <p className="text-sm text-destructive">
-                {errors.message.message}
-              </p>
-            )}
-          </div>
-
-          <DialogFooter className="flex justify-end gap-2">
-            <DialogClose asChild>
-              <Button type="button" variant="outline">
-                Cancel
-              </Button>
-            </DialogClose>
-            <Button type="submit" disabled={isSubmitting || !isValid}>
-              {isSubmitting ? "Sending..." : "Send"}
-            </Button>
-          </DialogFooter>
-        </form>
-      </DialogContent>
-    </Dialog>
+    </>
   );
 }

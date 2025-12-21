@@ -3,8 +3,10 @@ import { CircleSmall, Equal, EqualApproximately } from "lucide-react";
 import Connect from "./connect";
 import ProfileImage from "./profileImage";
 import Social from "./social";
+import { useState } from "react";
 
 function Profile() {
+  const [isOpen, setIsOpen] = useState(false);
   return (
     <header
       id="site-header"
@@ -18,14 +20,7 @@ function Profile() {
           size={18}
           className=" mr-auto text-chart-1 cursor-pointer hover:scale-110 active:scale-100"
         />
-        {/* <button
-          type="button"
-          aria-label="Toggle site font"
-          className="mr-auto text-ring cursor-pointer hover:scale-110 active:scale-100 transition-transform"
-        >
-          <Equal size={18} />
-          <EqualApproximately size={18} />
-        </button> */}
+
         <Connect />
       </div>
 

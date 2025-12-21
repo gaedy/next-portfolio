@@ -4,7 +4,7 @@ import Frontpage from "@/components/FrontPage";
 const HomePage = () => {
   return (
     <div className="flex flex-col flex-1 min-h-screen mt-20 max-w-2xl mx-auto  px-4">
-      <main id="main-content" className="flex-grow">
+      <main className="flex-grow">
         <Frontpage />
       </main>
       <Footer />

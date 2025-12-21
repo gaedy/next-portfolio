@@ -6,7 +6,16 @@ import { type ServiceItem } from "./servicesData";
 import { Button } from "../ui/button";
 import { Dialog, DialogTrigger } from "@/components/ui/dialog";
 import { ConnectDialog } from "@/components/connectDialog";
-
+import {
+  Drawer,
+  DrawerClose,
+  DrawerContent,
+  DrawerDescription,
+  DrawerFooter,
+  DrawerHeader,
+  DrawerTitle,
+  DrawerTrigger,
+} from "@/components/ui/drawer";
 import { motion } from "motion/react";
 
 export function ServiceCard({ service }: { service: ServiceItem }) {
@@ -66,7 +75,7 @@ export function ServiceCard({ service }: { service: ServiceItem }) {
         ))}
       </div>
 
-      <div className="flex items-center justify-between ">
+      <div className="flex items-center justify-between">
         {service.isPending !== true ? (
           <span className="font-medium ml-1"> {service.price}</span>
         ) : (
@@ -74,22 +83,45 @@ export function ServiceCard({ service }: { service: ServiceItem }) {
         )}
 
         {service.isPending !== true ? (
-          <Dialog open={isOpen} onOpenChange={setIsOpen}>
-            <DialogTrigger asChild>
-              <Button
-                variant="secondary"
-                size="sm"
-                className="z-10 transition-all duration-300 bg-input
-                            hover:bg-ring text-sm   rounded-full flex justify-between items-center cursor-pointer"
-              >
-                <p>{service.buttonText}</p>
-              </Button>
-            </DialogTrigger>
-            <ConnectDialog
-              serviceTitle={service.title}
-              onSuccess={() => setIsOpen(false)}
-            />
-          </Dialog>
+          <>
+            <div className="hidden sm:block">
+              <Dialog open={isOpen} onOpenChange={setIsOpen}>
+                <DialogTrigger asChild>
+                  <Button
+                    variant="secondary"
+                    size="sm"
+                    className="z-10 transition-all duration-300 bg-input
+                            hover:bg-ring text-sm mla   rounded-full flex justify-between items-center cursor-pointer"
+                  >
+                    <p>{service.buttonText}</p>
+                  </Button>
+                </DialogTrigger>
+                <ConnectDialog
+                  serviceTitle={service.title}
+                  onSuccess={() => setIsOpen(false)}
+                />
+              </Dialog>
+            </div>
+
+            <div className="sm:hidden">
+              <Drawer open={isOpen} onOpenChange={setIsOpen}>
+                <DrawerTrigger asChild>
+                  <Button
+                    variant="secondary"
+                    size="sm"
+                    className="z-10 transition-all duration-300 bg-input
+                            hover:bg-ring text-sm mla   rounded-full flex justify-between items-center cursor-pointer"
+                  >
+                    <p>{service.buttonText}</p>
+                  </Button>
+                </DrawerTrigger>
+                <ConnectDialog
+                  serviceTitle={service.title}
+                  onSuccess={() => setIsOpen(false)}
+                />
+              </Drawer>
+            </div>
+          </>
         ) : (
           <Button
             variant="secondary"
