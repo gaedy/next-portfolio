@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Mail } from "lucide-react";
+
 import {
   Dialog,
   DialogTrigger,
@@ -123,8 +124,8 @@ export default function Connect() {
                 className="w-full"
               >
                 <Button
-                  className="text-sm w-full  group mr-2 transition-colors duration-300 hover:bg-ring rounded-full cursor-pointer flex items-center justify-center"
-                  variant="secondary"
+                  className="text-sm w-full group mr-2 transition-colors duration-300 rounded-full cursor-pointer flex items-center justify-center"
+                  variant="violet"
                   size="sm"
                 >
                   <motion.span
@@ -241,26 +242,23 @@ export default function Connect() {
         <Drawer>
           <DrawerTrigger asChild>
             <Button
-              className="text-sm w-full  group mr-2 transition-colors duration-300 hover:bg-ring rounded-full cursor-pointer flex items-center justify-center"
-              variant="secondary"
+              className="text-sm w-full group cursor-pointer"
+              variant="violet"
               size="sm"
             >
               <span>Contact me</span>
             </Button>
           </DrawerTrigger>
 
-          <DrawerContent className="pb-safe">
+          <DrawerContent className="">
             <DrawerHeader className="text-left">
               <DrawerTitle>Send Me a Message</DrawerTitle>
-              <DrawerDescription>
-                Feel free to reach out! Fill in the form below and I&apos;ll get
-                back to you as soon as possible.
-              </DrawerDescription>
+              <DrawerDescription>Feel free to reach out!</DrawerDescription>
             </DrawerHeader>
 
-            <div className=" p-4 ">
+            <div className=" flex-1 overflow-y-auto">
               <form
-                className="flex-col flex gap-4"
+                className="flex-col p-4 flex gap-4"
                 onSubmit={handleSubmit(onSubmit)}
                 noValidate
               >
@@ -313,7 +311,7 @@ export default function Connect() {
                   )}
                 </div>
 
-                <DrawerFooter className="pt-2 p-0 shrink-0">
+                <DrawerFooter className="p-0 ">
                   <Button type="submit" disabled={isSubmitting || !isValid}>
                     {isSubmitting ? "Sending..." : "Send"}
                   </Button>

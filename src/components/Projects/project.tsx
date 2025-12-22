@@ -113,10 +113,9 @@ const Project: React.FC<ProjectProps> = ({ project }) => {
         {githubLink && (
           <Link href={githubLink} target="_blank">
             <Button
-              variant="secondary"
+              variant="violet"
               size="sm"
-              className="z-10  transition-all duration-300 bg-input
-              hover:bg-ring text-sm rounded-full flex justify-between items-center cursor-pointer"
+              className="z-10 bg-input cursor-pointer"
             >
               <SiGithub />
               <p>Github</p>
@@ -127,10 +126,9 @@ const Project: React.FC<ProjectProps> = ({ project }) => {
         {isBehance && (
           <Link href={behanceLink} target="_blank">
             <Button
-              variant="secondary"
+              variant="violet"
               size="sm"
-              className="z-10   transition-all duration-300 bg-input
-              hover:bg-ring text-sm rounded-full flex justify-between items-center cursor-pointer"
+              className="z-10 bg-input cursor-pointer"
             >
               <SiBehance />
               <p>Behance</p>
@@ -140,10 +138,9 @@ const Project: React.FC<ProjectProps> = ({ project }) => {
 
         <Link href={liveDemoLink} target="_blank">
           <Button
-            variant="secondary"
+            variant="violet"
             size="sm"
-            className="z-10  transition-all duration-300 bg-input
-              hover:bg-ring text-sm rounded-full flex justify-between items-center cursor-pointer"
+            className="z-10 bg-input cursor-pointer"
           >
             <p>Live Demo</p>
             <ArrowUpRight />

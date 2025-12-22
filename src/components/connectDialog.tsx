@@ -195,16 +195,16 @@ export function ConnectDialog({
             </DrawerDescription>
           </DrawerHeader>
 
-          <div className=" p-4">
+          <div className="flex-1 overflow-y-auto">
             <form
-              className="flex-col flex gap-4 "
+              className="flex-col p-4 flex gap-4 "
               onSubmit={handleSubmit(onSubmit)}
               noValidate
             >
               <div className="flex flex-col gap-2">
                 <Label htmlFor="name">Name (optional)</Label>
                 <Input
-                className="text-sm"
+                  className="text-sm"
                   id="name"
                   placeholder="e.g. Mohamed Salah"
                   {...register("name")}
@@ -220,7 +220,7 @@ export function ConnectDialog({
               <div className="flex flex-col gap-2">
                 <Label htmlFor="email">Email</Label>
                 <Input
-                className="text-sm"
+                  className="text-sm"
                   id="email"
                   type="email"
                   placeholder="you@example.com"
@@ -237,7 +237,6 @@ export function ConnectDialog({
               <div className="flex flex-col gap-2">
                 <Label htmlFor="message">Message</Label>
                 <Textarea
-                
                   id="message"
                   placeholder="Type your message..."
                   className="min-h-[100px] text-sm"

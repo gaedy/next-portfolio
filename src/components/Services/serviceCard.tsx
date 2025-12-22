@@ -42,7 +42,7 @@ export function ServiceCard({ service }: { service: ServiceItem }) {
       {/* Content Container */}
 
       <motion.div
-        className=" flex flex-col h-full justify-between transition-colors duration-300 bg-popover group-hover:bg-input group-hover:shadow-xl rounded-2xl border p-3 gap-2 "
+        className=" flex flex-col h-full justify-between transition-colors duration-300 bg-popover group-hover:bg-input shadow-xl rounded-2xl border p-3 gap-2 "
         initial={{ opacity: 0, y: 4 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.6 }}
@@ -53,10 +53,8 @@ export function ServiceCard({ service }: { service: ServiceItem }) {
           duration: 0.6,
         }}
       >
-        {/* Title */}
         <h3 className="font-medium">{service.title}</h3>
 
-        {/* Description */}
         <p className="text-sm mb-auto leading-relaxed text-muted-foreground">
           {service.description}
         </p>
@@ -88,10 +86,9 @@ export function ServiceCard({ service }: { service: ServiceItem }) {
               <Dialog open={isOpen} onOpenChange={setIsOpen}>
                 <DialogTrigger asChild>
                   <Button
-                    variant="secondary"
+                    variant="violet"
                     size="sm"
-                    className="z-10 transition-all duration-300 bg-input
-                            hover:bg-ring text-sm mla   rounded-full flex justify-between items-center cursor-pointer"
+                    className="z-10 text-sm bg cursor-pointer bg-input"
                   >
                     <p>{service.buttonText}</p>
                   </Button>
@@ -107,10 +104,9 @@ export function ServiceCard({ service }: { service: ServiceItem }) {
               <Drawer open={isOpen} onOpenChange={setIsOpen}>
                 <DrawerTrigger asChild>
                   <Button
-                    variant="secondary"
+                    variant="violet"
                     size="sm"
-                    className="z-10 transition-all duration-300 bg-input
-                            hover:bg-ring text-sm mla   rounded-full flex justify-between items-center cursor-pointer"
+                    className="z-10 bg-input text-sm cursor-pointer"
                   >
                     <p>{service.buttonText}</p>
                   </Button>
@@ -124,10 +120,9 @@ export function ServiceCard({ service }: { service: ServiceItem }) {
           </>
         ) : (
           <Button
-            variant="secondary"
+            variant="violet"
             size="sm"
-            className="z-10 transition-all duration-300 bg-input
-                        hover:bg-ring text-sm   rounded-full flex justify-between items-center cursor-pointer"
+            className="z-10 bg-input text-sm cursor-pointer"
             disabled
           >
             <p>Coming Soon</p>

@@ -6,13 +6,16 @@ import Image from "next/image";
 export default function ProfileImage() {
   return (
     <motion.div
-      initial={{ opacity: 0, scale: 0.95, y: -10 }}
+      initial={{ opacity: 0, scale: 1, y: 12 }}
       animate={{ opacity: 1, scale: 1, y: 0 }}
       transition={{
-        duration: 0.4,
+        duration: 1,
         type: "spring",
-        stiffness: 120,
-        damping: 12,
+        stiffness: 140,
+        damping: 13,
+        delay: 0.03,
+
+        mass: 1,
       }}
       className="relative h-9  w-8 pointer-events-none select-none overflow-hidden"
     >
