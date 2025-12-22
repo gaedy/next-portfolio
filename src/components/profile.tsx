@@ -1,12 +1,9 @@
-"use client";
-import { CircleSmall, Equal, EqualApproximately } from "lucide-react";
 import Connect from "./connect";
 import ProfileImage from "./profileImage";
 import Social from "./social";
-import { useState } from "react";
+import Joystick from "./joystick";
 
 function Profile() {
-  const [isOpen, setIsOpen] = useState(false);
   return (
     <header
       id="site-header"
@@ -16,20 +13,13 @@ function Profile() {
 
       <div className="w-full flex items-center flex-wrap gap-2 justify-between ">
         <h1 className="font-medium shrink-0 text-lg ">Ahmed Gaeedy</h1>
-        <CircleSmall
-          size={18}
-          className=" mr-auto text-chart-1 cursor-pointer hover:scale-110 active:scale-100"
-        />
+
+        <Joystick />
 
         <Connect />
       </div>
 
-      {/* <hr className="opacity-45 bg-ring" /> */}
-
       <div className="flex justify-between items-center flex-wrap gap-2 text-sm">
-        {/* <p className="text-muted-foreground text-balance font-medium">
-          Front-End Developer
-        </p> */}
         <Social />
       </div>
     </header>

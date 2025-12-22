@@ -100,7 +100,7 @@ export function ServiceCard({ service }: { service: ServiceItem }) {
               </Dialog>
             </div>
 
-            <div className="sm:hidden">
+            <div className="sm:hidden flex">
               <Drawer open={isOpen} onOpenChange={setIsOpen}>
                 <DrawerTrigger asChild>
                   <Button
