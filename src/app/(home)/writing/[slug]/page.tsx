@@ -53,7 +53,7 @@ export default async function BlogPostPage({
 
         <div className="flex items-center  gap-1">
           {/* <Timer size={14} /> */}
-          <span >{minutes} min read</span >
+          <span>{minutes} min read</span>
         </div>
         <span className="">&bull;</span>
 
