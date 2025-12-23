@@ -3,6 +3,7 @@ import {
   Cinema4d,
   DeviconPlainMaya,
   MageIllustrator,
+  MotionIcon,
 } from "@/components/jsxIcons";
 import React from "react";
 import { ToolSection } from "./ToolSection";
@@ -41,7 +42,8 @@ const Tools: React.FC = () => {
     { icon: <SiTailwindcss />, name: "Tailwind" },
     { icon: <SiRedux />, name: "Redux" },
     { icon: <SiShadcnui />, name: "Shadcn" },
-    { icon: <SiLucide />, name: "Lucide icons" },
+    { icon: <MotionIcon />, name: "Motion" },
+    { icon: <SiLucide />, name: "Lucide" },
     { icon: <SiPrisma />, name: "Prisma" },
     { icon: <SiPostgresql />, name: "Postgresql" },
     { icon: <SiBetterauth />, name: "Better Auth" },

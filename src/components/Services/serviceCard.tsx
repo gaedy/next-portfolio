@@ -6,16 +6,7 @@ import { type ServiceItem } from "./servicesData";
 import { Button } from "../ui/button";
 import { Dialog, DialogTrigger } from "@/components/ui/dialog";
 import { ConnectDialog } from "@/components/connectDialog";
-import {
-  Drawer,
-  DrawerClose,
-  DrawerContent,
-  DrawerDescription,
-  DrawerFooter,
-  DrawerHeader,
-  DrawerTitle,
-  DrawerTrigger,
-} from "@/components/ui/drawer";
+import { Drawer, DrawerTrigger } from "@/components/ui/drawer";
 import { motion } from "motion/react";
 
 export function ServiceCard({ service }: { service: ServiceItem }) {

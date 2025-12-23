@@ -13,9 +13,7 @@ function Profile() {
 
       <div className="w-full flex items-center flex-wrap gap-2 justify-between ">
         <h1 className="font-medium shrink-0 text-lg ">Ahmed Gaeedy</h1>
-
         <Joystick />
-
         <Connect />
       </div>
 
