@@ -15,7 +15,7 @@ const Frontpage = () => {
     hidden: {},
     visible: {
       transition: {
-        staggerChildren: 0.1,
+        staggerChildren: 0.11,
       },
     },
   };
@@ -23,7 +23,7 @@ const Frontpage = () => {
   const item = {
     hidden: {
       opacity: 0,
-      y: -20,
+      y: -15,
       scale: 0.98,
 
       filter: "blur(6px)",
@@ -34,7 +34,7 @@ const Frontpage = () => {
       scale: 1,
       filter: "blur(0px)",
       transition: {
-        duration: 0.8,
+        duration: 1.3,
         ease: [0.22, 1, 0.36, 1] as const,
         staggerChildren: 0.1,
         delayChildren: 0.2,
