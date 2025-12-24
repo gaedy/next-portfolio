@@ -4,7 +4,6 @@ import blogData from "@/app/data/blog.json";
 import ReactMarkdown from "react-markdown";
 import { Metadata } from "next";
 import readingTime from "reading-time";
-import { Clock, Timer } from "lucide-react";
 
 type Props = {
   params: Promise<{ slug: string }>; // Updated type to reflect Promise

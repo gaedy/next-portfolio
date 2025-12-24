@@ -1,4 +1,3 @@
-"use client";
 import {
   Cinema4d,
   DeviconPlainMaya,

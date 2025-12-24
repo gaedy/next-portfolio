@@ -1,5 +1,3 @@
-"use client";
-
 import { ServiceCard } from "./serviceCard";
 import { services } from "./servicesData";
 

@@ -1,9 +1,5 @@
 import React, { ReactNode } from "react";
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipTrigger,
-} from "@/components/ui/tooltip";
+
 interface Tool {
   name: string;
   icon: ReactNode;
