@@ -1,4 +1,6 @@
+"use client";
 import { motion } from "motion/react";
+
 import { Linkedin } from "@/components/jsxIcons";
 import { SiBehance, SiGithub, SiX } from "@icons-pack/react-simple-icons";
 import { Button } from "./ui/button";

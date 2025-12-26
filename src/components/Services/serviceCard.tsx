@@ -1,4 +1,6 @@
+"use client"
 import { CheckCircle2 } from "lucide-react";
+
 import { useState } from "react";
 import { type ServiceItem } from "./servicesData";
 import { Button } from "../ui/button";

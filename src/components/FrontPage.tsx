@@ -15,7 +15,7 @@ const Frontpage = () => {
     hidden: {},
     visible: {
       transition: {
-        staggerChildren: 0.10,
+        staggerChildren: 0.1,
       },
     },
   };
@@ -23,7 +23,7 @@ const Frontpage = () => {
   const item = {
     hidden: {
       opacity: 0,
-      y: -5,
+      y: -10,
       scale: 1,
 
       filter: "blur(6px)",
@@ -34,7 +34,7 @@ const Frontpage = () => {
       scale: 1,
       filter: "blur(0px)",
       transition: {
-        duration: 1.3,
+        duration: 1.2,
         ease: [0.22, 1, 0.36, 1] as const,
         staggerChildren: 0.1,
         delayChildren: 0.2,
@@ -45,7 +45,7 @@ const Frontpage = () => {
   const item2 = {
     hidden: {
       opacity: 0,
-      y: 40,
+      y: -30,
       scale: 0.98,
 
       filter: "blur(6px)",
@@ -58,7 +58,7 @@ const Frontpage = () => {
       transition: {
         duration: 0.8,
         ease: [0.22, 1, 0.36, 1] as const,
-        staggerChildren: 0.10,
+        staggerChildren: 0.1,
         delayChildren: 0.5,
       },
     },
@@ -82,13 +82,13 @@ const Frontpage = () => {
         <Services />
       </motion.div>
 
-      <motion.div variants={item2}>
-        <Projects />
-      </motion.div>
+      {/* <motion.div variants={item2}> */}
+      <Projects />
+      {/* </motion.div> */}
 
-      <motion.div variants={item2}>
-        <Tools />
-      </motion.div>
+      {/* <motion.div variants={item2}> */}
+      <Tools />
+      {/* </motion.div> */}
 
       <section className="flex items-center gap-2">
         <Link href="/writing" aria-label="Read my blog articles">
