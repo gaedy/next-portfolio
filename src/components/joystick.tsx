@@ -1,3 +1,4 @@
+"use client";
 import { Circle, Square, Triangle, XIcon } from "lucide-react";
 import { motion, useAnimationControls } from "motion/react";
 import Link from "next/link";
@@ -10,93 +11,99 @@ export default function Joystick() {
   const circle = useAnimationControls();
   const triangle = useAnimationControls();
 
-  // const collision = async () => {
-  //   await circle.start({
-  //     x: [-50, 0],
-  //     transition: {
-  //       duration: 0.45,
-  //       ease: "easeIn",
-  //     },
-  //   });
+  const collision = async () => {
+    await circle.start({
+      x: [-50, 0],
+      transition: {
+        duration: 0.45,
+        ease: "easeIn",
+      },
+    });
 
-  //   // 2. Impact — triangle reacts
-  //   triangle.start({
-  //     x: 2,
-  //     rotate: 4,
+    // 2. Impact — triangle reacts
+    triangle.start({
+      x: 2,
+      rotate: 4,
 
-  //     transition: {
-  //       type: "spring",
-  //       stiffness: 180,
-  //       damping: 14,
-  //     },
-  //   });
+      transition: {
+        type: "spring",
+        stiffness: 180,
+        damping: 14,
+      },
+    });
 
-  //   circle.start({
-  //     x: -2,
-  //     transition: {
-  //       type: "spring",
-  //       stiffness: 100,
-  //       damping: 18,
-  //     },
-  //   });
+    circle.start({
+      x: -2,
+      transition: {
+        type: "spring",
+        stiffness: 100,
+        damping: 18,
+      },
+    });
 
-  //   // ⏸ small pause so the eye catches it
-  //   await new Promise((r) => setTimeout(r, 120));
+    // ⏸ small pause so the eye catches it
+    await new Promise((r) => setTimeout(r, 350));
 
-  //   // 3. Return to rest
-  //   triangle.start({
-  //     x: 0,
-  //     rotate: 0,
-  //     transition: {
-  //       type: "spring",
-  //       stiffness: 140,
-  //       damping: 10,
-  //     },
-  //   });
+    // 3. Return to rest
+    triangle.start({
+      x: 0,
+      rotate: 0,
+      transition: {
+        type: "spring",
+        stiffness: 140,
+        damping: 10,
+      },
+    });
 
-  //   circle.start({
-  //     x: 0,
-  //     transition: {
-  //       type: "spring",
-  //       stiffness: 100,
-  //       damping: 18,
-  //     },
-  //   });
-  // };
+    circle.start({
+      x: 0,
+      transition: {
+        type: "spring",
+        stiffness: 100,
+        damping: 18,
+      },
+    });
+  };
 
-  // useEffect(() => {
-  //   async function run() {
-  //     collision();
-  //   }
+  useEffect(() => {
+    async function run() {
+      collision();
+    }
 
-  //   run();
-  // }, [circle, triangle]);
+    run();
+  }, [circle, triangle]);
 
   return (
     <>
-      {/* <div className="mr-auto flex items-center gap-2">
-        <Link href="#projects">
+      <div className="mr-auto flex items-center gap-2">
+        <Link
+          href="#projects"
+          className="hover:scale-110 transition-transform cursor-pointer"
+        >
           <MotionCircle
             size={14}
             strokeWidth={3}
-            className="text-chart-1 cursor-pointer"
+            className="text-chart-1"
             animate={circle}
             initial={{ x: -50 }}
           />
         </Link>
 
-        <Link href="/writing">
+        <Link
+          href="/writing"
+          className="hover:scale-110 transition-transform cursor-pointer"
+        >
           <MotionTriangle
             size={14}
             strokeWidth={3}
-            className="text-chart-1 cursor-pointer"
+            className="text-chart-1  "
             animate={triangle}
             initial={{ x: 0, rotate: 0 }}
           />
         </Link>
-      </div> */}
+      </div>
 
-      <div className="mr-auto flex items-center gap-2">
+      {/* <div className="mr-auto flex items-center gap-2">
         <Link href="#projects">
           <Circle
             size={14}
@@ -111,7 +118,7 @@ export default function Joystick() {
             className="text-chart-1 transition-transform hover:scale-110 cursor-pointer active:scale-100"
           />
         </Link>
-      </div>
+      </div> */}
     </>
   );
 }
