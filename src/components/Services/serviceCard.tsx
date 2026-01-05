@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { CheckCircle2 } from "lucide-react";
 
 import { useState } from "react";
@@ -49,7 +49,7 @@ export function ServiceCard({ service }: { service: ServiceItem }) {
         <p className="text-sm mb-auto leading-relaxed text-muted-foreground">
           {service.description}
         </p>
-        <div className="flex text-sm gap-2 items-center   py-1">
+        <div className="flex text-sm gap-2 items-center py-1">
           {service.icons.map((Icon, index) => (
             <Icon key={index} size={18} />
           ))}
