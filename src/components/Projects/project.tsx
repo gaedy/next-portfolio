@@ -16,7 +16,7 @@ import {
 } from "@icons-pack/react-simple-icons";
 
 import Link from "next/link";
-import { TypescriptIcon } from "../jsxIcons";
+import { TypescriptIcon } from "../ui/JSXIcons";
 import { Button } from "../ui/button";
 import Image from "next/image";
 import { motion } from "motion/react";

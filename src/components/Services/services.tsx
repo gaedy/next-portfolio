@@ -1,6 +1,5 @@
-import { ServiceCard } from "./serviceCard";
-import { services } from "./servicesData";
-
+import { ServiceCard } from "./ServiceCard";
+import { services } from "./services.api";
 function Services() {
   return (
     <section

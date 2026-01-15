@@ -3,9 +3,8 @@ import {
   DeviconPlainMaya,
   MageIllustrator,
   MotionIcon,
-} from "@/components/jsxIcons";
+} from "@/components/ui/JSXIcons";
 import React from "react";
-import { ToolSection } from "./ToolSection";
 import {
   SiBetterauth,
   SiBlender,
@@ -24,6 +23,7 @@ import {
   SiTypescript,
   SiZod,
 } from "@icons-pack/react-simple-icons";
+import { ToolSection } from "./ToolSection";
 
 interface ToolItem {
   icon: React.ReactNode;

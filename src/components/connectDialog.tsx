@@ -26,7 +26,7 @@ import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { toast } from "sonner";
-import { contactSchema } from "./connect";
+import { contactSchema } from "./Connect";
 import React from "react";
 import { useMediaQuery } from "@/app/hooks/useMedia";
 

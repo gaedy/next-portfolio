@@ -7,7 +7,7 @@ import {
   SiPrisma,
   SiTailwindcss,
 } from "@icons-pack/react-simple-icons";
-import { MageIllustrator } from "@/components/jsxIcons";
+import { MageIllustrator } from "@/components/ui/JSXIcons";
 
 export interface ServiceItem {
   id: string;

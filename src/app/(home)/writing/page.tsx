@@ -1,5 +1,5 @@
 import blogData from "@/app/data/blog.json";
-import Article from "@/components/article";
+import Article from "@/components/Article";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {

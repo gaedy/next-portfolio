@@ -2,10 +2,10 @@
 import { CheckCircle2 } from "lucide-react";
 
 import { useState } from "react";
-import { type ServiceItem } from "./servicesData";
+import { type ServiceItem } from "./services.api";
 import { Button } from "../ui/button";
 import { Dialog, DialogTrigger } from "@/components/ui/dialog";
-import { ConnectDialog } from "@/components/connectDialog";
+import { ConnectDialog } from "@/components/ConnectDialog";
 import { Drawer, DrawerTrigger } from "@/components/ui/drawer";
 import { motion } from "motion/react";
 

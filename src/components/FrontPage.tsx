@@ -1,13 +1,13 @@
 "use client";
 
-import Profile from "@/components/profile";
-import About from "@/components/about";
-import Projects from "@/components/Projects/projects";
+import Profile from "@/components/Profile";
+import About from "@/components/About";
+import Projects from "@/components/projects/Projects";
 
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
-import Tools from "./Tools/tools";
-import Services from "./Services/services";
+import Tools from "./tools/Tools";
+import Services from "./services/Services";
 import { motion } from "motion/react";
 
 const Frontpage = () => {
