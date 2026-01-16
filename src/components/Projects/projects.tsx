@@ -1,5 +1,5 @@
-import { projects } from "@/components/projects/projects.api";
-import Project from "./Project";
+import Project from "./project";
+import { projects } from "./projects.api";
 
 function Projects() {
   return (

@@ -1,7 +1,9 @@
-import Connect from "./Connect";
-import ProfileImage from "./ProfileImage";
-import Social from "./Social";
-import Joystick from "./Joystick";
+
+import Connect from "./connect";
+import Joystick from "./joystick";
+import ProfileImage from "./profileImage";
+import Social from "./social";
+
 
 function Profile() {
   return (
