@@ -10,7 +10,7 @@ function About() {
 
       <div className="flex flex-col  rounded-3xl gap-2 text-muted-foreground leading-relaxed text-sm">
         <p>
-          I&apos;m Ahmed, a{" "}
+          {/* I&apos;m Ahmed, a{" "} */}
           <span className="text-foreground">Front-End Developer</span> and{" "}
           <span className="text-foreground">UI Designer</span> passionate about
           crafting visually stunning and intuitive digital experiences.

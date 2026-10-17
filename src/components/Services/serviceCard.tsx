@@ -34,7 +34,7 @@ export function ServiceCard({ service }: { service: ServiceItem }) {
       {/* Content Container */}
 
       <motion.div
-        className=" flex flex-col h-full justify-between transition-colors duration-300 bg-popover group-hover:bg-input shadow-xl rounded-2xl border p-3 gap-2 "
+        className=" flex flex-col h-full  justify-between transition-colors duration-300 bg-popover group-hover:bg-input shadow-2xl rounded-2xl border p-3 gap-2 "
         initial={{ opacity: 0, y: 4 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.6 }}
@@ -60,7 +60,7 @@ export function ServiceCard({ service }: { service: ServiceItem }) {
       <div className="flex flex-col">
         {service.features.map((feature, index) => (
           <div key={index} className="text-sm p-1 flex items-center gap-2">
-            <CheckCircle2 size={16} /> {feature}
+            <CheckCircle2 size={16} className="text-chart-1" /> {feature}
           </div>
         ))}
       </div>

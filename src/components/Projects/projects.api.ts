@@ -18,7 +18,7 @@ export const projects = [
     liveDemoLink: "https://smart-chapters.vercel.app/",
     isNew: true,
     isBehance: false,
-    pic: "/cover2.webp",
+    pic: "/newCover01.webp",
   },
   {
     title: "Personal Portfolio - Showcasing My Work & Skills",

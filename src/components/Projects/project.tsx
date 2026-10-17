@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { ArrowUpRight } from "lucide-react";
 import {
@@ -77,7 +77,7 @@ const Project: React.FC<ProjectProps> = ({ project }) => {
       >
         <Image
           src={pic}
-          className=" h-40 group-hover:brightness-100 brightness-75 transition-all duration-300 object-cover rounded-[15px] group-hover:scale-103"
+          className=" h-40 group-hover:brightness-100 brightness-100 md:brightness-75 transition-all duration-300 object-cover rounded-[15px] group-hover:scale-103"
           alt={title}
           width={800}
           height={400}
