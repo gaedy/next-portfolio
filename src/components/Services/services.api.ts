@@ -14,7 +14,7 @@ export interface ServiceItem {
   title: string;
   description: string;
   features: string[];
-  price: string;
+  price?: string;
   buttonText: string;
   buttonHref: string;
   image: string;
@@ -33,7 +33,7 @@ export const services: ServiceItem[] = [
       "Next.js routing and SEO-friendly pages.",
       "Pixel-perfect Figma implementation.",
     ],
-    price: "$500",
+    // price: "$500",
     buttonText: "Get in touch",
     buttonHref: "#contact",
     image: "/web-development-coding.png",
@@ -50,7 +50,7 @@ export const services: ServiceItem[] = [
       "Pixel-perfect developer-ready design.",
       "Optimized user flow for conversions.",
     ],
-    price: "$200",
+    // price: "$200",
     buttonText: "Get in touch",
     buttonHref: "#contact",
     image: "/laptop-with-plants-modern-design.jpg",
@@ -68,7 +68,7 @@ export const services: ServiceItem[] = [
       "Defined design system and components.",
       "Clear structure for development.",
     ],
-    price: "$500",
+    // price: "$500",
     buttonText: "Get in touch",
     buttonHref: "#contact",
     image: "/web-development-coding.png",
@@ -85,7 +85,7 @@ export const services: ServiceItem[] = [
       "Clean and maintainable architecture.",
       "API integration and real-time features.",
     ],
-    price: "$800",
+    // price: "$800",
     buttonText: "Get in touch",
     buttonHref: "#contact",
     image: "/mobile-app-development.png",
