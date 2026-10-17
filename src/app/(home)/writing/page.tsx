@@ -25,7 +25,11 @@ export default function BlogPage() {
         </p>
       ) : (
         blogPosts.map((post) => (
-          <Article key={post.slug} post={post} isPreview={true} />
+          <Article
+            key={post.slug}
+            post={post}
+            isLocked={post.isLocked}
+          />
         ))
       )}
     </section>

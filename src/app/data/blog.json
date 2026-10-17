@@ -6,7 +6,8 @@
       "author": "Ahmed Gaeedy",
       "date": "2025-02-20T14:30:00Z",
       "img": "/img1.jpg",
-      "isFeatured": false
+      "isFeatured": false,
+      "isLocked": true
     }
   }
 }

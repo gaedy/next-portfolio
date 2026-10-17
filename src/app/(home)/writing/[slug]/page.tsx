@@ -18,7 +18,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   return {
     title: `${post.title} | Ahmed Gaeedy`,
-    description: "Read my latest article.",
+    description: post.isLocked
+      ? "This article is temporarily locked."
+      : "Read my latest article.",
   };
 }
 
@@ -30,6 +32,7 @@ export default async function BlogPostPage({
   const { slug } = await params;
   const post = blogData.blogPosts[slug as keyof typeof blogData.blogPosts];
   if (!post) return notFound();
+  if (post.isLocked) return notFound();
 
   const currentDate = new Date(post.date).toLocaleDateString("en-US", {
     month: "short",
@@ -47,19 +50,15 @@ export default async function BlogPostPage({
       </header>
 
       <div className="text-sm text-muted-foreground flex-row items-center flex gap-2 flex-wrap">
-        {/* <p>By {post.author}</p>
-        <span className="sm:flex hidden">&bull;</span> */}
-
-        <div className="flex items-center  gap-1">
-          {/* <Timer size={14} /> */}
+        <div className="flex items-center gap-1">
           <span>{minutes} min read</span>
         </div>
-        <span className="">&bull;</span>
+        <span>&bull;</span>
 
         <p>{currentDate}</p>
       </div>
 
-      <hr className="bg-border " />
+      <hr className="bg-border" />
 
       <section className="prose-dark font-merriweather">
         <ReactMarkdown>{post.content}</ReactMarkdown>

@@ -28,7 +28,7 @@ export const projects = [
     behanceLink: "https://www.behance.net/portfolio",
 
     technologies: ["typescript", "nextjs", "tailwind", "shadCn", "lucide"],
-    liveDemoLink: "https://gaeedy.space",
+    liveDemoLink: "https://gaeedy.lat",
     isNew: false,
     isBehance: false,
     pic: "/cover3.webp",
